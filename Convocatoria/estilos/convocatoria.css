@@ -11,11 +11,14 @@
             transform: translateY(0);
             pointer-events: auto;
         }
-        .file-upload {
-            border: 2px dashed #ccc;
+        .document-card {
             transition: all 0.3s ease;
         }
-        .file-upload:hover {
-            border-color: #3b82f6;
-            background-color: #f0f7ff;
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .countdown-number {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
         }
