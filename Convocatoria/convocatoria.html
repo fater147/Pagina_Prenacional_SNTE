@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convocatoria</title>
+    <link rel="stylesheet" href="estilos/convocatoria.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-800 to-blue-200 text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Acerca de Nosotros</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 px-4 pb-12">
+        <section class="text-center mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Explora Nuestras Secciones</h2>
+            <div class="relative inline-block">
+                <button class="bg-blue-500 text-white py-2 px-6 rounded-lg font-semibold hover:bg-blue-700 transition" id="menuButton">☰ Menú</button>
+                <ul class="dropdown-menu absolute hidden bg-white shadow-lg rounded mt-2 w-48 z-10">
+                    <li class="border-b hover:bg-gray-100"><a href="" class="block p-2">Inicio</a></li>
+                    <li class="border-b hover:bg-gray-100"><a href="" class="block p-2">Deporte</a></li>
+                    <li class="border-b hover:bg-gray-100"><a href="" class="block p-2">Salud</a></li>
+                    <li class="hover:bg-gray-100"><a href="" class="block p-2">Diversión</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-10 p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-700">Información General</h2>
+            <p class="text-lg">
+                Somos una organización dedicada a promover el bienestar integral a través del deporte, la salud y actividades recreativas. 
+                Nuestro objetivo es fomentar un estilo de vida saludable y activo en la comunidad.
+            </p>
+        </section>
+
+        <!-- Sección para subir documentación -->
+        <section class="mb-10 p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-700">Documentación Requerida</h2>
+            <p class="mb-4">Por favor, sube los documentos necesarios para completar tu registro:</p>
+            
+            <form id="documentForm" class="space-y-6">
+                <!-- Documento 1 -->
+                <div class="file-upload-container">
+                    <label class="block text-lg font-medium mb-2">Identificación Oficial</label>
+                    <div class="file-upload p-4 rounded-lg text-center cursor-pointer mb-2">
+                        <input type="file" id="idDocument" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                            </svg>
+                            <span class="text-gray-600">Arrastra tu archivo aquí o haz clic para seleccionar</span>
+                            <span class="text-sm text-gray-500">Formatos aceptados: PDF, JPG, PNG (Máx. 5MB)</span>
+                        </div>
+                    </div>
+                    <div id="idDocumentName" class="text-sm text-green-600 mt-1 hidden"></div>
+                </div>
+
+                <!-- Documento 2 -->
+                <div class="file-upload-container">
+                    <label class="block text-lg font-medium mb-2"></label>
+                    <div class="file-upload p-4 rounded-lg text-center cursor-pointer mb-2">
+                        <input type="file" id="addressProof" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                            </svg>
+                            <span class="text-gray-600">Arrastra tu archivo aquí o haz clic para seleccionar</span>
+                            <span class="text-sm text-gray-500">Formatos aceptados: PDF, JPG, PNG (Máx. 5MB)</span>
+                        </div>
+                    </div>
+                    <div id="addressProofName" class="text-sm text-green-600 mt-1 hidden"></div>
+                </div>
+
+                <!-- Documento 3 -->
+                <div class="file-upload-container">
+                    <label class="block text-lg font-medium mb-2">Formulario de Inscripción</label>
+                    <div class="file-upload p-4 rounded-lg text-center cursor-pointer mb-2">
+                        <input type="file" id="registrationForm" class="hidden" accept=".pdf,.doc,.docx">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                            </svg>
+                            <span class="text-gray-600">Arrastra tu archivo aquí o haz clic para seleccionar</span>
+                            <span class="text-sm text-gray-500">Formatos aceptados: PDF, DOC, DOCX (Máx. 5MB)</span>
+                        </div>
+                    </div>
+                    <div id="registrationFormName" class="text-sm text-green-600 mt-1 hidden"></div>
+                </div>
+
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition w-full">
+                    Enviar Documentación
+                </button>
+            </form>
+        </section>
+
+        <!-- Sección de documentos subidos -->
+        <section class="p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-700">Documentos Subidos</h2>
+            <div id="uploadedDocuments" class="space-y-4">
+                <p class="text-gray-500 italic">No hay documentos subidos aún.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 Deporte, Salud y Diversión. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="interactividad/convocatoria.js"> </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.dropdown-mun {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .file-upload {
+            border: 2px dashed #ccc;
+            transition: all 0.3s ease;
+        }
+        .file-upload:hover {
+            border-color: #3b82f6;
+            background-color: #f0f7ff;
+        }
