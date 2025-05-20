@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deporte, Salud y Diversión</title>
+  <link rel="stylesheet" href="css22.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="#inicio"><img src="SNTE.png" alt="SNTE Sección 61"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="inicio.html" class="active">Inicio</a></li>
+        <li><a href="">Convocatoria</a></li>
+        <li><a href="">Disciplinas</a></li>
+        <li><a href="hotelesof.html">Hoteles</a></li>
+        <li><a href="">Patrocinadores</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Bienvenidos al XI Evento Nacional Cultural y Deportivo</h1>
+      <p>Conecta, compite y celebra la diversidad de talentos en Hermosillo, Sonora.</p>
+      <a href="" class="btn-primary">Ver Convocatoria</a>
+    </div>
+    <div id="countdown" class="countdown"></div>
+  </section>
+
+ 
+  <section id="convocatoria" class="section convocatoria">
+    <div class="container">
+      <h2>Convocatoria del XI Evento Nacional Cultural y Deportivo</h2>
+      <p>El Instituto Tecnológico de Hermosillo y el SNTE Sección 61 invitan a participar en competencias deportivas y culturales.</p>
+    </div>
+  </section>
+
+  
+  <section id="disciplinas" class="carousel-section section">
+    <div class="container">
+      <h2>Disciplinas</h2>
+      <div class="carousel-wrapper">
+        <button class="nav prev" aria-label="Anterior"></button>
+        <div class="carousel" id="carousel">
+          <div class="carousel-item"><img src="aje.jpeg" alt="Ajedrez"></div>
+          <div class="carousel-item"><img src="bas.jpg" alt="Básquetbol"></div>
+          <div class="carousel-item"><img src="beisbo.jpeg" alt="Béisbol"></div>
+          <div class="carousel-item"><img src="fut.avif" alt="Fútbol"></div>
+        </div>
+        <button class="nav next" aria-label="Siguiente"></button>
+      </div>
+    </div>
+  </section>
+>
+  <section id="disciplinas-convocadas" class="section">
+    <div class="container">
+      <h2>Disciplinas Convocadas</h2>
+      <div class="cards">
+        <div class="card"><h3>Ajedrez</h3><p>Mixto, sistema suizo (máx. 2 jugadores)</p></div>
+        <div class="card"><h3>Basquetbol</h3><p>Varonil y femenil (8–12 jugadores)</p></div>
+        <div class="card"><h3>Béisbol & Softbol</h3><p>Varonil (12–20 jugadores)</p></div>
+        <div class="card"><h3>Fútbol Soccer</h3><p>Varonil (15–22 jugadores)</p></div>
+        <div class="card"><h3>Voleibol</h3><p>Varonil y femenil (8–12 jugadores)</p></div>
+        <div class="card"><h3>Atletismo</h3><p>Diferentes pruebas y categorías por edad</p></div>
+        <div class="card"><h3>Danza, Música & Poesía</h3><p>Presentación grupal (todas las edades)</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="fechas-clave" class="section">
+    <div class="container">
+      <h2>Fechas Clave</h2>
+      <ul class="key-dates">
+        <li><strong>Preinscripción:</strong> Hasta el 13 de junio de 2025</li>
+        <li><strong>Registro oficial:</strong> 22 de junio de 2025, 14:00–18:00 (Edif. B5)</li>
+        <li><strong>Junta previa:</strong> 22 de junio de 2025, 16:00 (Edif. B5)</li>
+        <li><strong>Inauguración:</strong> 23 de junio de 2025, 09:00 (Gimnasio ITH)</li>
+        <li><strong>Clausura y premiación:</strong> 27 de junio de 2025</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="lugar" class="section">
+    <div class="container">
+      <h2>Sedes Oficiales</h2>
+      <div class="map-logo-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3486.225330550272!2d-110.99768189999999!3d29.099028299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1747735715571!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+          </iframe>
+        </div>
+      </div>
+      <p class="map-address">
+        Instituto Tecnológico de Hermosillo<br>
+       Dirrecion Av. Tecnológico 115, Sahuaro, 83170 Hermosillo, Son.
+      </p>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</p>
+      <div class="social">
+        <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="icon-facebook.svg" alt="Facebook"></a>
+      </div>
+    </div>
+  </footer>
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.getElementById('carousel');
+      const prevBtn = document.querySelector('.nav.prev');
+      const nextBtn = document.querySelector('.nav.next');
+      const itemWidth = carousel.querySelector('.carousel-item').offsetWidth + 10;
+
+      function updateButtons() {
+        prevBtn.disabled = carousel.scrollLeft <= 0;
+        nextBtn.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth;
+      }
+
+      prevBtn.addEventListener('click', () => carousel.scrollBy({ left: -itemWidth, behavior: 'smooth' }));
+      nextBtn.addEventListener('click', () => carousel.scrollBy({ left: itemWidth, behavior: 'smooth' }));
+      carousel.addEventListener('scroll', updateButtons);
+      updateButtons();
+
+      // Countdown
+      const countdown = document.getElementById('countdown');
+      const targetDate = new Date('2025-06-22T14:00:00');
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+        if (diff <= 0) {
+          countdown.textContent = '¡El evento ha comenzado!';
+          clearInterval(interval);
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+        countdown.textContent = `${days}d ${hours}h ${mins}m ${secs}s para el inicio`;
+      }
+
+      const interval = setInterval(updateCountdown, 1000);
+      updateCountdown();
+    });
+  </script>
+</body>
+</html>
