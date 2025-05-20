@@ -1,0 +1,254 @@
+/* Variables configurables */
+:root {
+  --main-bg: #f4f4f4;
+  --header-bg: #2d3e50;
+  --header-color: #fff;
+  --button-bg: #fff;
+  --button-hover-bg: #e0e7ef;
+  --button-border: #b0b0b0;
+  --button-radius: 12px;
+  --spacing: 24px;
+  --img-size: 200px; /* Duplicado de 100px a 200px */
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+body {
+  background: linear-gradient(135deg, #f4f4f4 60%, #e0e7ef 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--header-color);
+  text-align: center;
+  padding: 24px 0 12px 0;
+  margin-bottom: var(--spacing);
+  background-image: url('../img/fondo_disciplinas.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+  height: 300px;
+  min-height: 300px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;    /* Centra verticalmente */
+  justify-content: center;/* Centra horizontalmente */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Opcional: fondo semitransparente para mejorar la legibilidad del texto */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 62, 80, 0.6); /* Ajusta la opacidad/color si lo deseas */
+  z-index: 0;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2 {
+  margin: 0 0 16px 0;
+}
+
+.boton-general, .botones-general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra los botones vertical y horizontalmente */
+  margin-bottom: var(--spacing);
+  width: 100%;
+}
+
+.boton-imagen {
+  background: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: var(--button-radius);
+  box-shadow: var(--shadow);
+  padding: 16px 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.2s;
+  margin-bottom: 8px;
+}
+
+.boton-imagen:hover {
+  background: var(--button-hover-bg);
+}
+
+.boton-imagen img {
+  display: block;
+  margin: 0 auto 8px auto;
+  width: var(--img-size);
+  height: var(--img-size);
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.boton-imagen p {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #222;
+}
+
+.opciones {
+  text-align: center;
+}
+
+.opciones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opciones li {
+  margin: 6px 0;
+}
+
+.opciones a {
+  text-decoration: none;
+  color: #2d3e50;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.opciones a:hover {
+  color: #0078d7;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #2d3e50;
+}
+
+footer {
+  background: var(--header-bg);
+  color: var(--header-color);
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 40px;
+  font-size: 0.95em;
+}
+
+/* Nueva clase para agrupar filas de botones */
+.fila-botones {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
+  flex-wrap: wrap;
+}
+
+/* Opcional: para que los botones ocupen el mismo alto */
+.fila-botones > .boton-general,
+.fila-botones > .botones-general {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fondo suave para las páginas de información */
+main section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(45,62,80,0.08);
+  padding: 32px 24px 24px 24px;
+  margin: 32px auto;
+  max-width: 700px;
+  border-left: 6px solid #2d3e50;
+  position: relative;
+}
+
+/* Títulos destacados */
+main h2 {
+  color: #0078d7;
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+main h3 {
+  color: #2d3e50;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+main ul, main ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+main li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+main p {
+  color: #333;
+  font-size: 1.08em;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+main section:not(:last-child) {
+  border-bottom: 2px solid #e0e7ef;
+}
+
+header h1, main h1 {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(45,62,80,0.25);
+  font-size: 2.2em;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 800px) {
+  main section {
+    padding: 18px 8px 16px 8px;
+    max-width: 98vw;
+  }
+}
+
+/* Responsive: agrupa botones en filas en pantallas grandes */
+@media (min-width: 700px) {
+  body {
+    padding: 0 10vw;
+  }
+  .boton-general, .botones-general {
+    flex-direction: row;
+    justify-content: center; /* Centra los botones horizontalmente en pantallas grandes */
+    gap: var(--spacing);
+    margin-bottom: var(--spacing);
+    width: 100%;
+  }
+  .boton-imagen {
+    margin-bottom: 0;
+  }
+}
