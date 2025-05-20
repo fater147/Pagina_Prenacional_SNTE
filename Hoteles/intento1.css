@@ -265,7 +265,7 @@ body {
   line-height: 1.2;
 }
 .encabezado {
-  background-image: url("moo.jpg");
+  background-image: url("../img/moo.jpg");
   background-size: cover;
   background-position: center;
   height: 200px;

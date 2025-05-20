@@ -1,19 +1,77 @@
+/* --- MENÚ HEADER Y NAVEGACIÓN --- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00274d;
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .logo img {
+  height: 50px;
+}
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav .active {
+  border-bottom: 4px solid #c8102e;
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    background-color: #00274d;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+
 /* Variables configurables */
 :root {
   --main-bg: #f4f4f4;
-  --header-bg: #2d3e50;
+  --header-bg: #00274d;
   --header-color: #fff;
   --button-bg: #fff;
-  --button-hover-bg: #e0e7ef;
-  --button-border: #b0b0b0;
+  --button-hover-bg: #eef2f5;
+  --button-border: #c8102e;
   --button-radius: 12px;
   --spacing: 24px;
-  --img-size: 200px; /* Duplicado de 100px a 200px */
+  --img-size: 200px;
   --shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --primary-accent: #c8102e;
+  --secondary-accent: #ff6600;
+  --section-title: #00274d;
+  --card-border: #003366;
+  --card-title: #ff6600;
 }
 
 body {
-  background: linear-gradient(135deg, #f4f4f4 60%, #e0e7ef 100%);
+  background: linear-gradient(135deg, #f4f4f4 60%, #eef2f5 100%);
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -40,8 +98,8 @@ header {
   min-height: 300px;
   max-height: 600px;
   display: flex;
-  align-items: center;    /* Centra verticalmente */
-  justify-content: center;/* Centra horizontalmente */
+  align-items: center;
+  justify-content: center;
 }
 
 header h1 {
@@ -49,14 +107,16 @@ header h1 {
   font-size: 2.5em;
   position: relative;
   z-index: 1;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
-/* Opcional: fondo semitransparente para mejorar la legibilidad del texto */
+/* Fondo semitransparente para mejorar la legibilidad del texto */
 header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(45, 62, 80, 0.6); /* Ajusta la opacidad/color si lo deseas */
+  background: rgba(0, 39, 77, 0.6);
   z-index: 0;
 }
 
@@ -73,14 +133,14 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centra los botones vertical y horizontalmente */
+  justify-content: center;
   margin-bottom: var(--spacing);
   width: 100%;
 }
 
 .boton-imagen {
   background: var(--button-bg);
-  border: 1px solid var(--button-border);
+  border: 2px solid var(--button-border);
   border-radius: var(--button-radius);
   box-shadow: var(--shadow);
   padding: 16px 24px;
@@ -94,6 +154,7 @@ h1, h2 {
 
 .boton-imagen:hover {
   background: var(--button-hover-bg);
+  border-color: var(--secondary-accent);
 }
 
 .boton-imagen img {
@@ -103,13 +164,14 @@ h1, h2 {
   height: var(--img-size);
   object-fit: cover;
   border-radius: 8px;
+  border: 2px solid var(--card-border);
 }
 
 .boton-imagen p {
   margin: 0;
   font-size: 1.1em;
   font-weight: 500;
-  color: #222;
+  color: var(--section-title);
 }
 
 .opciones {
@@ -128,31 +190,34 @@ h1, h2 {
 
 .opciones a {
   text-decoration: none;
-  color: #2d3e50;
+  color: var(--header-bg);
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .opciones a:hover {
-  color: #0078d7;
+  color: var(--primary-accent);
 }
 
 h2 {
   text-align: center;
   margin-top: 40px;
-  color: #2d3e50;
+  color: var(--section-title);
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-accent);
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 footer {
-  background: var(--header-bg);
-  color: var(--header-color);
+  background: #0D3B66;
+  color: #fff;
   text-align: center;
   padding: 12px 0;
   margin-top: 40px;
   font-size: 0.95em;
 }
 
-/* Nueva clase para agrupar filas de botones */
 .fila-botones {
   display: flex;
   justify-content: center;
@@ -161,7 +226,6 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Opcional: para que los botones ocupen el mismo alto */
 .fila-botones > .boton-general,
 .fila-botones > .botones-general {
   flex: 1 1 0;
@@ -170,30 +234,30 @@ footer {
   align-items: center;
 }
 
-/* Fondo suave para las páginas de información */
 main section {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(45,62,80,0.08);
+  box-shadow: 0 2px 16px rgba(0,39,77,0.08);
   padding: 32px 24px 24px 24px;
   margin: 32px auto;
   max-width: 700px;
-  border-left: 6px solid #2d3e50;
+  border-left: 6px solid var(--header-bg);
   position: relative;
 }
 
-/* Títulos destacados */
 main h2 {
-  color: #0078d7;
+  color: var(--secondary-accent);
   margin-top: 0;
   margin-bottom: 18px;
   font-size: 1.5em;
   letter-spacing: 1px;
   font-weight: 700;
+  border: none;
+  padding-bottom: 0;
 }
 
 main h3 {
-  color: #2d3e50;
+  color: var(--header-bg);
   margin-top: 24px;
   margin-bottom: 10px;
   font-size: 1.15em;
@@ -218,15 +282,21 @@ main p {
 }
 
 main section:not(:last-child) {
-  border-bottom: 2px solid #e0e7ef;
+  border-bottom: 2px solid #eef2f5;
 }
 
 header h1, main h1 {
   color: #fff;
-  text-shadow: 0 2px 8px rgba(45,62,80,0.25);
+  text-shadow: 0 2px 8px rgba(0,39,77,0.25);
   font-size: 2.2em;
   font-weight: 800;
   letter-spacing: 2px;
+}
+
+.centrado {
+  text-align: center !important;
+  display: block;
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -236,14 +306,13 @@ header h1, main h1 {
   }
 }
 
-/* Responsive: agrupa botones en filas en pantallas grandes */
 @media (min-width: 700px) {
   body {
     padding: 0 10vw;
   }
   .boton-general, .botones-general {
     flex-direction: row;
-    justify-content: center; /* Centra los botones horizontalmente en pantallas grandes */
+    justify-content: center;
     gap: var(--spacing);
     margin-bottom: var(--spacing);
     width: 100%;
