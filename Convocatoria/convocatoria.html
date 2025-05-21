@@ -4,35 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convocatoria ITHERMOSILLO 2025</title>
-    <link rel="stylesheet" href="estilos/convocatoria.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="intento1.css">
 </head>
-<body class="bg-gradient-to-r from-blue-800 to-blue-200 text-gray-800 font-sans">
-    <header class="bg-blue-600 text-white py-4 shadow-md">
-        <div class="container mx-auto text-center">
-            <h1 class="text-3xl font-bold">XI Evento Nacional Cultural y Deportivo</h1>
-            <p class="text-xl mt-2">Sección 61 - Zona Norte Pacífico</p>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="inicio.html"><img src="../img/SNTE.png" alt="SNTE Sección 61"></a>
         </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="convocatoria.html" class="active">Convocatoria</a></li>
+                <li><a href="disciplinas.html">Disciplinas</a></li>
+                <li><a href="hoteles.html">Hoteles</a></li>
+                <li><a href="patrocinadores.html">Patrocinadores</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <div class="encabezado">
+        Convocatoria
+    </div>
 
-    <main class="container mx-auto mt-8 px-4 pb-12">
-        <section class="text-center mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Explora Nuestras Secciones</h2>
-            <div class="relative inline-block">
-                <button class="bg-blue-500 text-white py-2 px-6 rounded-lg font-semibold hover:bg-blue-700 transition" id="menuButton">☰ Menú</button>
-                <ul class="dropdown-menu absolute hidden bg-white shadow-lg rounded mt-2 w-48 z-10">
-                    <li class="border-b hover:bg-gray-100"><a href="index.html" class="block p-2">Inicio</a></li>
-                    <li class="border-b hover:bg-gray-100"><a href="deporte.html" class="block p-2">Deporte</a></li>
-                    <li class="border-b hover:bg-gray-100"><a href="salud.html" class="block p-2">Salud</a></li>
-                    <li class="hover:bg-gray-100"><a href="diversion.html" class="block p-2">Diversión</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Sección de información principal -->
+    <main class="container">
         <section class="mb-10 p-6 bg-white rounded-lg shadow-md">
             <div class="text-center mb-6">
-                <h2 class="text-3xl font-bold text-blue-700 mb-2">¡Participa en el gran evento deportivo y cultural 2025!</h2>
+                <h2 class="section-title">¡Participa en el gran evento deportivo y cultural 2025!</h2>
                 <p class="text-xl text-gray-600">Del 22 al 27 de junio en el Instituto Tecnológico de Hermosillo</p>
                 
                 <!-- Contador regresivo -->
@@ -134,7 +131,7 @@
 
         <!-- Sección de beneficios -->
         <section class="mb-10 p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-6 text-center text-blue-700">¿Por qué participar?</h2>
+            <h2 class="section-title">¿Por qué participar?</h2>
             
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-blue-50 p-4 rounded-lg text-center">
@@ -171,7 +168,7 @@
 
         <!-- Sección de documentos descargables -->
         <section class="mb-10 p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-6 text-center text-blue-700">Documentos Requeridos</h2>
+            <h2 class="section-title">Documentos Requeridos</h2>
             <p class="text-center mb-6">Descarga los documentos necesarios para tu inscripción y envíalos completos al correo: <span class="font-semibold text-blue-600">sindicatoithermosillo@gmail.com</span></p>
             
             <div class="grid md:grid-cols-3 gap-6">
@@ -182,10 +179,7 @@
                     </div>
                     <div class="p-4">
                         <p class="text-gray-600 mb-4">Descarga el documento con todas las bases y requisitos para participar en el evento.</p>
-                        <a href="CONVOCATORIA ITHERMOSILLO 2025.docx" download class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                            </svg>
+                        <a href="CONVOCATORIA ITHERMOSILLO 2025.docx" download class="btn-primary">
                             Descargar PDF
                         </a>
                     </div>
@@ -198,10 +192,7 @@
                     </div>
                     <div class="p-4">
                         <p class="text-gray-600 mb-4">Formato oficial para registrar a los participantes de cada delegación.</p>
-                        <a href="Cédula de registro.pdf" download class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                            </svg>
+                        <a href="Cédula de registro.pdf" download class="btn-primary">
                             Descargar PDF
                         </a>
                     </div>
@@ -214,10 +205,7 @@
                     </div>
                     <div class="p-4">
                         <p class="text-gray-600 mb-4">Plantilla para generar las credenciales oficiales de los participantes.</p>
-                        <a href="Credenciales.pdf" download class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                            </svg>
+                        <a href="Credenciales.pdf" download class="btn-primary">
                             Descargar PDF
                         </a>
                     </div>
@@ -242,7 +230,7 @@
 
         <!-- Sección de contacto -->
         <section class="p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-4 text-blue-700">¿Tienes dudas?</h2>
+            <h2 class="section-title">¿Tienes dudas?</h2>
             <p class="text-lg mb-4">Contáctanos para resolver cualquier pregunta sobre el evento:</p>
             
             <div class="grid md:grid-cols-2 gap-6">
@@ -291,8 +279,13 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; 2025 Instituto Tecnológico de Hermosillo - Sección 61 SNTE. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</p>
+            <div class="social">
+                <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="../img/icon-facebook.svg" alt="Facebook"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="interactividad/convocatoria.js"></script>
