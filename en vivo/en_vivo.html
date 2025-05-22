@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juegos en Vivo - ITHERMOSILLO 2025</title>
+  <link rel="stylesheet" href="estilos/en_vivo.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../inicio.html"><img src="../img/SNTE.png" alt="SNTE Sección 61"></a>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="../inicio.html">Inicio</a></li>
+      <li><a href="convocatoria.html">Convocatoria</a></li>
+      <li><a href="../Disciplinas/Disciplinas.html">Disciplinas</a></li>
+      <li><a href="../Hoteles/hotelesof.html">Hoteles</a></li>
+      <li><a href="../Organizadores/index.html">Patrocinadores</a></li>
+      <li><a href="en_vivo.html" class="active">En Vivo</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container" style="padding: 2rem;">
+  <section class="section">
+    <h2 style="text-align:center;">Transmisión Principal</h2>
+    <div class="main-player">
+      <iframe id="mainPlayer" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align:center;">Selecciona una transmisión</h2>
+    <div id="streamList" class="stream-list"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</p>
+    <div class="social">
+      <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="../img/icon-facebook.svg" alt="Facebook"></a>
+    </div>
+  </div>
+</footer>
+
+<script src="interactividad/en_vivo.js"></script>
+
+</body>
+</html>
+
