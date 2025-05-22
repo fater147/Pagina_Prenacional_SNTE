@@ -63,7 +63,7 @@ body {
 
 /* === HERO Y BOTÓN === */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hermosillo.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hermosillo.jpg') center/cover no-repeat;
   color: white;
   padding: 4rem 2rem;
   text-align: center;
