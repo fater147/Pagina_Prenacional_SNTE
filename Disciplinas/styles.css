@@ -1,4 +1,11 @@
-/* --- MENÚ HEADER Y NAVEGACIÓN --- */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Encabezado */
 .site-header {
   position: fixed;
   top: 0;
@@ -16,6 +23,7 @@
   height: 50px;
 }
 
+/* Navegación principal */
 .main-nav {
   position: relative;
 }
@@ -24,8 +32,6 @@
   list-style: none;
   display: flex;
   gap: 15px;
-  margin: 0;
-  padding: 0;
 }
 
 .main-nav a {
@@ -42,12 +48,15 @@
   border-bottom: 4px solid #c8102e;
 }
 
+.main-nav a:hover,
+.main-nav a.active {
+  color: #fdfaf8;
+}
+
 @media (max-width: 768px) {
   .main-nav ul {
     flex-direction: column;
-    background-color: #00274d;
-    padding: 10px;
-    border-radius: 8px;
+    align-items: center;
   }
 }
 
@@ -75,58 +84,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-}
-
-header {
-  background: var(--header-bg);
-  color: var(--header-color);
-  text-align: center;
-  padding: 24px 0 12px 0;
-  margin-bottom: var(--spacing);
-  background-image: url('../img/fondo_disciplinas.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
-  height: 300px;
-  min-height: 300px;
-  max-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
-}
-
-/* Fondo semitransparente para mejorar la legibilidad del texto */
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 39, 77, 0.6);
-  z-index: 0;
-}
-
-header > * {
-  position: relative;
-  z-index: 1;
-}
-
-h1, h2 {
-  margin: 0 0 16px 0;
+  padding-top: 80px; /* Espacio para el menú fijo */
 }
 
 .boton-general, .botones-general {
@@ -209,15 +167,6 @@ h2 {
   padding-bottom: 5px;
 }
 
-footer {
-  background: #0D3B66;
-  color: #fff;
-  text-align: center;
-  padding: 12px 0;
-  margin-top: 40px;
-  font-size: 0.95em;
-}
-
 .fila-botones {
   display: flex;
   justify-content: center;
@@ -234,76 +183,10 @@ footer {
   align-items: center;
 }
 
-main section {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(0,39,77,0.08);
-  padding: 32px 24px 24px 24px;
-  margin: 32px auto;
-  max-width: 700px;
-  border-left: 6px solid var(--header-bg);
-  position: relative;
-}
-
-main h2 {
-  color: var(--secondary-accent);
-  margin-top: 0;
-  margin-bottom: 18px;
-  font-size: 1.5em;
-  letter-spacing: 1px;
-  font-weight: 700;
-  border: none;
-  padding-bottom: 0;
-}
-
-main h3 {
-  color: var(--header-bg);
-  margin-top: 24px;
-  margin-bottom: 10px;
-  font-size: 1.15em;
-  font-weight: 600;
-}
-
-main ul, main ol {
-  margin-left: 1.5em;
-  margin-bottom: 1em;
-}
-
-main li {
-  margin-bottom: 6px;
-  line-height: 1.6;
-}
-
-main p {
-  color: #333;
-  font-size: 1.08em;
-  line-height: 1.7;
-  margin-bottom: 18px;
-}
-
-main section:not(:last-child) {
-  border-bottom: 2px solid #eef2f5;
-}
-
-header h1, main h1 {
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,39,77,0.25);
-  font-size: 2.2em;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
 .centrado {
   text-align: center !important;
   display: block;
   width: 100%;
-}
-
-@media (max-width: 800px) {
-  main section {
-    padding: 18px 8px 16px 8px;
-    max-width: 98vw;
-  }
 }
 
 @media (min-width: 700px) {
