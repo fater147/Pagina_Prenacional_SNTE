@@ -2,37 +2,37 @@
   {
     "titulo": "Ajedrez",
     "disciplina": "Ajedrez",
-    "url": "https://www.youtube.com/embed/LA4Mz9jUUkk",
-    "plataforma": "youtube"
+    "url": "https://www.facebook.com/anahuacqro/videos/709667218413834",
+    "plataforma": "facebook"
   },
   {
     "titulo": "Fútbol Soccer",
     "disciplina": "Fútbol",
-    "url": "https://www.youtube.com/watch?v=wh0Q4Q9i3nQ",
-    "plataforma": "youtube"
+    "url": "https://www.facebook.com/MiSeleccionMX/videos/9873723822745402/",
+    "plataforma": "facebook"
   },
   {
     "titulo": "Atletismo",
     "disciplina": "Atletismo",
-    "url": "https://www.instagram.com/p/CpTspDDuGu8/embed",
-    "plataforma": "instagram"
+    "url": "",
+    "plataforma": "facebook"
   },
   {
     "titulo": "Baloncesto",
     "disciplina": "Baloncesto",
-    "url": "https://www.youtube.com/embed/LA4Mz9jUUkk",
-    "plataforma": "youtube"
+    "url": "",
+    "plataforma": "facebook"
   },
   {
     "titulo": "Voleibol",
     "disciplina": "Voleibol",
-    "url": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FNASA360%2Fvideos%2F10156070687381772%2F",
+    "url": "",
     "plataforma": "facebook"
   },
   {
     "titulo": "Natación",
     "disciplina": "Natación",
-    "url": "https://www.instagram.com/p/CpTspDDuGu8/embed",
-    "plataforma": "instagram"
+    "url": "",
+    "plataforma": "facebook"
   }
 ]
