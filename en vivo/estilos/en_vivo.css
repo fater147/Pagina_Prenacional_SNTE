@@ -191,9 +191,9 @@ body {
   flex: 1;
   overflow-x: auto;
   scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  white-space: nowrap;
 }
+
 
 .stream-scroll::-webkit-scrollbar {
   display: none;
@@ -202,9 +202,11 @@ body {
 /* Lista de transmisiones */
 .stream-list {
   display: flex;
+  flex-wrap: nowrap;
   gap: 1rem;
   padding: 0.5rem 0;
 }
+
 
 .stream-card {
   min-width: 250px;
@@ -301,3 +303,88 @@ body {
   animation: pulse 0.5s ease;
   color: #ff6600;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (max-width: 1024px) {
+  .main-player iframe {
+    height: 380px;
+  }
+
+  .stream-card {
+    min-width: 220px;
+  }
+
+  .stream-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-player iframe {
+    height: 300px;
+  }
+
+  .stream-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stream-scroll {
+    width: 100%;
+  }
+
+  .stream-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stream-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-player iframe {
+    height: 240px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .stream-card {
+    padding: 0.8rem;
+  }
+}
+.platform-icon-img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.view-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
