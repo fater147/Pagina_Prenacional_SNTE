@@ -1,40 +1,28 @@
-// Menú desplegable
-        const menuButton = document.getElementById('menuButton');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
+document.addEventListener('DOMContentLoaded', () => {
+    const targetDate = new Date('2025-06-22T00:00:00').getTime();
+    const countdownContainer = document.getElementById('countdown');
 
-        menuButton.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('hidden');
-        });
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
 
-        // Cerrar menú al hacer clic fuera
-        document.addEventListener('click', (e) => {
-            if (!menuButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.classList.add('hidden');
-            }
-        });
+      if (distance < 0) {
+        countdownContainer.innerHTML = "<strong>¡El evento ha comenzado!</strong>";
+        clearInterval(interval);
+        return;
+      }
 
-        // Contador regresivo
-        function updateCountdown() {
-            const eventDate = new Date('June 22, 2025 00:00:00').getTime();
-            const now = new Date().getTime();
-            const distance = eventDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownContainer.innerHTML = `<div class="countdown-box"><span class="num">${days}</span><span class="label">Días</span></div>
+                                      <div class="countdown-box"><span class="num">${hours}</span><span class="label">Horas</span></div>
+                                      <div class="countdown-box"><span class="num">${minutes}</span><span class="label">Min</span></div>
+                                      <div class="countdown-box"><span class="num">${seconds}</span><span class="label">Seg</span></div>`;
+    }
 
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(countdownTimer);
-                document.getElementById('countdown').innerHTML = "¡El evento ha comenzado!";
-            }
-        }
-
-        // Actualizar el contador cada segundo
-        updateCountdown();
-        const countdownTimer = setInterval(updateCountdown, 1000);
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+  });

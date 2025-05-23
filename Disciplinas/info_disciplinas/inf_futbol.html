@@ -5,60 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información de futbol</title>
   <link rel="stylesheet" href="../styles.css">
+  <style>
+
+/* Decoración adicional para la tarjeta de información de futbol (paleta unificada) */
+    .card-futbol {
+      background: #f8fafc;
+      border: 2px solid #003366;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+      padding: 2.5rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      position: relative;
+    }
+    .futbol-img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px #00336633);
+      border-radius: 12px;
+      background: #fff;
+      border: 2px solid #c8102e;
+      padding: 8px;
+    }
+    .section-title {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .card-futbol h3 {
+      color: #003366;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+    .card-futbol ul, .card-futbol ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card-futbol p {
+      margin-bottom: 1rem;
+    }
+    .divider {
+      border: none;
+      border-top: 2px solid #c8102e;
+      margin: 2rem 0;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 600px) {
+      .card-futbol {
+        padding: 1.2rem 0.5rem;
+      }
+      .futbol-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Información de futbol</h1>
+  <header class="site-header">
+    <div class="logo">
+      <a href="../../index.html"><img src="../../img/SNTE.png" alt="SNTE Sección 61"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
+        <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
+        <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
+        <!--<li><a href="../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>-->
+        <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <section>
-      <h2>Descripción</h2>
-      <p>
+  <div style="height:70px"></div>
+  <main class="container section">
+    <div class="card-futbol">
+      <img src="../../img/football.jpg" alt="Futbol" class="futbol-img">
+      <h1 style="text-align:center; color:#003366; margin-bottom:2rem;">Información de futbol</h1>
+      <h2 class="section-title">Descripción</h2>
+      <p style="text-align:center;">
         rama varonil, se aceptarán mínimo 15 jugadores y 22 como máximo. Se jugará en 2 tiempos de 35 minutos cada uno.
       </p>
-    </section>
-    <section>
-      <h2>Reglamento</h2>
+      <h2 class="section-title">Reglamento</h2>
       <h3>1. Participación</h3>
-  <ul>
-    <li>La competencia será exclusivamente en la rama varonil.</li>
-    <li>Cada equipo deberá contar con un mínimo de 15 jugadores y un máximo de 22 registrados.</li>
-    <li>En el campo jugarán 11 jugadores por equipo, incluyendo al portero.</li>
-  </ul>
-
-  <h3>2. Duración del Partido</h3>
-  <ul>
-    <li>Los encuentros se jugarán en 2 tiempos de 35 minutos cronometrados cada uno.</li>
-    <li>Habrá un descanso de 10 minutos entre ambos tiempos.</li>
-    <li>En caso de empate y si el reglamento del torneo lo exige, se jugarán tiempos extras o tanda de penales.</li>
-  </ul>
-
-  <h3>3. Reglas Básicas del Juego</h3>
-  <ul>
-    <li>El objetivo es anotar más goles que el equipo rival en el tiempo reglamentario.</li>
-    <li>El balón solo puede jugarse con cualquier parte del cuerpo excepto las manos y brazos, a excepción del portero dentro de su área.</li>
-    <li>Las infracciones como faltas, manos o conducta antideportiva serán sancionadas por el árbitro con tiros libres, penales o tarjetas.</li>
-    <li>Un gol será válido si el balón cruza completamente la línea de gol entre los postes y bajo el travesaño.</li>
-  </ul>
-
-  <h3>4. Sustituciones</h3>
-  <ul>
-    <li>Cada equipo podrá realizar hasta 5 sustituciones por partido.</li>
-    <li>Los jugadores sustituidos no podrán volver a ingresar, salvo que el torneo permita cambios libres.</li>
-  </ul>
-
-  <h3>5. Árbitros</h3>
-  <ul>
-    <li>El partido será dirigido por un árbitro central, asistido por dos árbitros de línea.</li>
-    <li>El árbitro tiene la autoridad para sancionar, detener el juego y tomar decisiones definitivas.</li>
-  </ul>
-
-  <h3>6. Uniforme</h3>
-  <ul>
-    <li>Todos los jugadores deben portar uniforme completo y numerado, incluyendo camiseta, short, medias, espinilleras y calzado adecuado.</li>
-    <li>El portero deberá usar un uniforme de color distinto al de los demás jugadores y árbitros.</li>
-  </ul>
-    </section>
+      <ul>
+        <li>La competencia será exclusivamente en la rama varonil.</li>
+        <li>Cada equipo deberá contar con un mínimo de 15 jugadores y un máximo de 22 registrados.</li>
+        <li>En el campo jugarán 11 jugadores por equipo, incluyendo al portero.</li>
+      </ul>
+      <h3>2. Duración del Partido</h3>
+      <ul>
+        <li>Los encuentros se jugarán en 2 tiempos de 35 minutos cronometrados cada uno.</li>
+        <li>Habrá un descanso de 10 minutos entre ambos tiempos.</li>
+        <li>En caso de empate y si el reglamento del torneo lo exige, se jugarán tiempos extras o tanda de penales.</li>
+      </ul>
+      <h3>3. Reglas Básicas del Juego</h3>
+      <ul>
+        <li>El objetivo es anotar más goles que el equipo rival en el tiempo reglamentario.</li>
+        <li>El balón solo puede jugarse con cualquier parte del cuerpo excepto las manos y brazos, a excepción del portero dentro de su área.</li>
+        <li>Las infracciones como faltas, manos o conducta antideportiva serán sancionadas por el árbitro con tiros libres, penales o tarjetas.</li>
+        <li>Un gol será válido si el balón cruza completamente la línea de gol entre los postes y bajo el travesaño.</li>
+      </ul>
+      <h3>4. Sustituciones</h3>
+      <ul>
+        <li>Cada equipo podrá realizar hasta 5 sustituciones por partido.</li>
+        <li>Los jugadores sustituidos no podrán volver a ingresar, salvo que el torneo permita cambios libres.</li>
+      </ul>
+      <h3>5. Árbitros</h3>
+      <ul>
+        <li>El partido será dirigido por un árbitro central, asistido por dos árbitros de línea.</li>
+        <li>El árbitro tiene la autoridad para sancionar, detener el juego y tomar decisiones definitivas.</li>
+      </ul>
+      <h3>6. Uniforme</h3>
+      <ul>
+        <li>Todos los jugadores deben portar uniforme completo y numerado, incluyendo camiseta, short, medias, espinilleras y calzado adecuado.</li>
+        <li>El portero deberá usar un uniforme de color distinto al de los demás jugadores y árbitros.</li>
+      </ul>
+    </div>
   </main>
+  <footer class="site-footer" style="margin-top:40px; background:#00274d; color:#fff; text-align:center; padding:18px 0; width:100vw; position:relative; left:50%; transform:translateX(-50%);">
+    <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+      <span>2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</span>
+      <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA" target="_blank" style="display:inline-block; background:#fff; border-radius:50%; padding:4px;">
+        <img src="../../img/fb.png" alt="Facebook" style="width:28px; height:28px; display:block;">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

@@ -5,21 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Información de softbol</title>
     <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* Decoración adicional para la tarjeta de información de softbol (paleta unificada) */
+      .card-softbol {
+        background: #f8fafc;
+        border: 2px solid #003366;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+        padding: 2.5rem 2rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        position: relative;
+      }
+      .softbol-img {
+        display: block;
+        margin: 0 auto 1.5rem auto;
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 8px #00336633);
+        border-radius: 12px;
+        background: #fff;
+        border: 2px solid #c8102e;
+        padding: 8px;
+      }
+      .section-title {
+        color: #ff6600;
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .card-softbol h3 {
+        color: #003366;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.15rem;
+      }
+      .card-softbol ul, .card-softbol ol {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      .card-softbol p {
+        margin-bottom: 1rem;
+      }
+      .divider {
+        border: none;
+        border-top: 2px solid #c8102e;
+        margin: 2rem 0;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 600px) {
+        .card-softbol {
+          padding: 1.2rem 0.5rem;
+        }
+        .softbol-img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Información de softbol</h1>
+    <header class="site-header">
+      <div class="logo">
+        <a href="../../index.html"><img src="../../img/SNTE.png" alt="SNTE Sección 61"></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
+          <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
+          <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
+          <!--<li><a href="../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>-->
+          <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <section>
-        <h2>Descripción</h2>
-        <p>
-          rama varonil, se aceptarán mínimo 12 jugadores y 20 como máximo. Se
-          jugará a 7 entradas.
+    <div style="height:70px"></div>
+    <main class="container section">
+      <div class="card-softbol">
+        <img src="../../img/sofbol.jpg" alt="Softbol" class="softbol-img">
+        <h1 style="text-align:center; color:#003366; margin-bottom:2rem;">Información de softbol</h1>
+        <h2 class="section-title">Descripción</h2>
+        <p style="text-align:center;">
+          Rama varonil, se aceptarán mínimo 12 jugadores y 20 como máximo. Se jugará a 7 entradas.
         </p>
-      </section>
-      <section>
-        <h2>Reglamento</h2>
+        <h2 class="section-title">Reglamento</h2>
         <h3>1. Participación</h3>
         <ul>
           <li>La competencia será exclusivamente en la rama varonil.</li>
@@ -32,7 +107,6 @@
             campo.
           </li>
         </ul>
-
         <h3>2. Duración del Juego</h3>
         <ul>
           <li>Los partidos se jugarán a 7 entradas completas.</li>
@@ -42,7 +116,6 @@
           </li>
           <li>Gana el equipo que anote más carreras al final del juego.</li>
         </ul>
-
         <h3>3. Reglas Básicas del Juego</h3>
         <ul>
           <li>
@@ -58,7 +131,6 @@
           </li>
           <li>El turno ofensivo termina cuando se consiguen tres outs.</li>
         </ul>
-
         <h3>4. Sustituciones</h3>
         <ul>
           <li>
@@ -67,7 +139,6 @@
           </li>
           <li>Un jugador sustituido no podrá volver a ingresar al partido.</li>
         </ul>
-
         <h3>5. Árbitros</h3>
         <ul>
           <li>
@@ -78,7 +149,6 @@
             Sus decisiones serán definitivas durante el desarrollo del juego.
           </li>
         </ul>
-
         <h3>6. Uniforme</h3>
         <ul>
           <li>
@@ -87,7 +157,15 @@
           </li>
           <li>El uso de casco al batear y guantes es obligatorio.</li>
         </ul>
-      </section>
+      </div>
     </main>
+    <footer class="site-footer" style="margin-top:40px; background:#00274d; color:#fff; text-align:center; padding:18px 0; width:100vw; position:relative; left:50%; transform:translateX(-50%);">
+      <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+        <span>2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</span>
+        <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA" target="_blank" style="display:inline-block; background:#fff; border-radius:50%; padding:4px;">
+          <img src="../../img/fb.png" alt="Facebook" style="width:28px; height:28px; display:block;">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
