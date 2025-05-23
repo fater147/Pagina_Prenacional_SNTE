@@ -6,6 +6,69 @@
   <title>Información de danza</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../../css22.css">
+  <style>
+    /* Decoración adicional para la tarjeta de información */
+    .card-ajedrez {
+      background: #f8fafc;
+      border: 2px solid #003366;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+      padding: 2.5rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      position: relative;
+    }
+    .ajedrez-img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px #00336633);
+      border-radius: 12px;
+      background: #fff;
+      border: 2px solid #c8102e;
+      padding: 8px;
+    }
+    .section-title {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .card-ajedrez h3 {
+      color: #003366;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+    .card-ajedrez ul, .card-ajedrez ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card-ajedrez p {
+      margin-bottom: 1rem;
+    }
+    .divider {
+      border: none;
+      border-top: 2px solid #c8102e;
+      margin: 2rem 0;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 600px) {
+      .card-ajedrez {
+        padding: 1.2rem 0.5rem;
+      }
+      .ajedrez-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -25,27 +88,30 @@
   </header>
   <div style="height:70px"></div>
   <main class="container section">
-    <section>
+    <div class="card-ajedrez">
+      <img src="../../img/danza.png" alt="Danza" class="ajedrez-img">
       <h1 style="text-align:center; color:#003366; margin-bottom:2rem;">Información de danza</h1>
-      <h2 class="section-title">Descripción</h2>
-      <p style="text-align:center;">
-        La danza es una expresión artística que combina el movimiento, la música y la emoción. En esta disciplina se fomenta la creatividad, la coordinación, el trabajo en equipo y el respeto por la diversidad cultural. Cada presentación es una oportunidad para transmitir sentimientos, contar historias y celebrar nuestras raíces a través del cuerpo y el ritmo.
-      </p>
-    </section>
-    <section>
-      <h2 class="section-title">Danzas de México</h2>
-      <p>
-        Las danzas mexicanas forman parte del patrimonio cultural del país y reflejan las tradiciones, costumbres e historia de cada región. A través del baile, se celebran fiestas populares, religiosas y cívicas, mostrando una gran riqueza en vestimenta, música y estilo.
-      </p>
-      <ul>
-        <li>Jarabe Tapatío - Considerado el baile nacional de México, originario de Jalisco.</li>
-        <li>Danza del Venado - Tradicional de los pueblos yaquis y mayos, representa la caza del venado.</li>
-        <li>Danza de los Viejitos - Originaria de Michoacán, con movimientos alegres y uso de máscaras.</li>
-        <li>Polka Norteña - Muy popular en los estados del norte, con pasos rápidos y en pareja.</li>
-        <li>Son Jarocho - De Veracruz, con zapateado rítmico acompañado de arpa y jarana.</li>
-      </ul>
-      <p>(Las danzas anteriores no necesariamente estarán presentándose en el evento, son solo un ejemplo de nuestra diversidad artística)</p>
-    </section>
+      <section>
+        <h2 class="section-title">Descripción</h2>
+        <p style="text-align:center;">
+          La danza es una expresión artística que combina el movimiento, la música y la emoción. En esta disciplina se fomenta la creatividad, la coordinación, el trabajo en equipo y el respeto por la diversidad cultural. Cada presentación es una oportunidad para transmitir sentimientos, contar historias y celebrar nuestras raíces a través del cuerpo y el ritmo.
+        </p>
+      </section>
+      <section>
+        <h2 class="section-title">Danzas de México</h2>
+        <p>
+          Las danzas mexicanas forman parte del patrimonio cultural del país y reflejan las tradiciones, costumbres e historia de cada región. A través del baile, se celebran fiestas populares, religiosas y cívicas, mostrando una gran riqueza en vestimenta, música y estilo.
+        </p>
+        <ul>
+          <li>Jarabe Tapatío - Considerado el baile nacional de México, originario de Jalisco.</li>
+          <li>Danza del Venado - Tradicional de los pueblos yaquis y mayos, representa la caza del venado.</li>
+          <li>Danza de los Viejitos - Originaria de Michoacán, con movimientos alegres y uso de máscaras.</li>
+          <li>Polka Norteña - Muy popular en los estados del norte, con pasos rápidos y en pareja.</li>
+          <li>Son Jarocho - De Veracruz, con zapateado rítmico acompañado de arpa y jarana.</li>
+        </ul>
+        <p>(Las danzas anteriores no necesariamente estarán presentándose en el evento, son solo un ejemplo de nuestra diversidad artística)</p>
+      </section>
+    </div>
   </main>
 </body>
 </html>

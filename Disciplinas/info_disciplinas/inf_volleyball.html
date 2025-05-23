@@ -6,6 +6,69 @@
     <title>Información de volleyball</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../../css22.css" />
+    <style>
+      /* Decoración adicional para la tarjeta de información */
+      .card-ajedrez {
+        background: #f8fafc;
+        border: 2px solid #003366;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+        padding: 2.5rem 2rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        position: relative;
+      }
+      .ajedrez-img {
+        display: block;
+        margin: 0 auto 1.5rem auto;
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 8px #00336633);
+        border-radius: 12px;
+        background: #fff;
+        border: 2px solid #c8102e;
+        padding: 8px;
+      }
+      .section-title {
+        color: #ff6600;
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .card-ajedrez h3 {
+        color: #003366;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.15rem;
+      }
+      .card-ajedrez ul, .card-ajedrez ol {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      .card-ajedrez p {
+        margin-bottom: 1rem;
+      }
+      .divider {
+        border: none;
+        border-top: 2px solid #c8102e;
+        margin: 2rem 0;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 600px) {
+        .card-ajedrez {
+          padding: 1.2rem 0.5rem;
+        }
+        .ajedrez-img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Menú de navegación igual a index.html -->
@@ -26,50 +89,53 @@
     </header>
     <div style="height:70px"></div>
     <main class="container section">
-      <section>
+      <div class="card-ajedrez">
+        <img src="../../img/volleyball.png" alt="Volleyball" class="ajedrez-img">
         <h1 style="text-align:center; color:#003366; margin-bottom:2rem;">Información de volleyball</h1>
-        <h2 class="section-title">Descripción</h2>
-        <p style="text-align:center;">
-          Rama femenil y varonil, se aceptarán mínimo 8 jugadores y 12 como máximo y se jugarán 2 sets de 25 tantos y uno de 15 tantos a ganar 2 de 3 sets.
-        </p>
-      </section>
-      <section>
-        <h2 class="section-title">Reglamento</h2>
-        <h3>1. Participación</h3>
-        <ul>
-          <li>La competencia será en ramas femenil y varonil.</li>
-          <li>Cada equipo debe contar con un mínimo de 8 jugadores y un máximo de 12 registrados.</li>
-          <li>En la cancha jugarán 6 jugadores por equipo durante cada set.</li>
-        </ul>
-        <h3>2. Duración del Partido</h3>
-        <ul>
-          <li>El partido se juega al mejor de 3 sets.</li>
-          <li>Los dos primeros sets se juegan a 25 puntos cada uno, debiendo ganar con una ventaja mínima de 2 puntos.</li>
-          <li>Si se requiere un tercer set, se jugará a 15 puntos, también con una diferencia mínima de 2 puntos para ganar.</li>
-        </ul>
-        <h3>3. Reglas Básicas del Juego</h3>
-        <ul>
-          <li>El objetivo es ganar el set alcanzando el número de puntos requerido.</li>
-          <li>Los puntos se anotan en cada jugada, independientemente de quién sirva (rally point).</li>
-          <li>Un equipo puede tocar el balón hasta 3 veces antes de enviarlo al campo contrario.</li>
-          <li>No se permite que un jugador toque el balón dos veces consecutivas, excepto en un bloqueo.</li>
-        </ul>
-        <h3>4. Sustituciones</h3>
-        <ul>
-          <li>Cada equipo podrá realizar sustituciones durante el partido, hasta un máximo permitido por el reglamento oficial.</li>
-          <li>Las sustituciones deben ser autorizadas por el juez y registradas.</li>
-        </ul>
-        <h3>5. Árbitros</h3>
-        <ul>
-          <li>El partido será dirigido por un árbitro principal y un segundo árbitro, asistidos por jueces de línea y anotadores.</li>
-          <li>Las decisiones de los árbitros son definitivas durante el partido.</li>
-        </ul>
-        <h3>6. Uniforme</h3>
-        <ul>
-          <li>Los jugadores deben portar uniforme completo con número visible.</li>
-          <li>El uso de calzado adecuado para cancha es obligatorio.</li>
-        </ul>
-      </section>
+        <section>
+          <h2 class="section-title">Descripción</h2>
+          <p style="text-align:center;">
+            Rama femenil y varonil, se aceptarán mínimo 8 jugadores y 12 como máximo y se jugarán 2 sets de 25 tantos y uno de 15 tantos a ganar 2 de 3 sets.
+          </p>
+        </section>
+        <section>
+          <h2 class="section-title">Reglamento</h2>
+          <h3>1. Participación</h3>
+          <ul>
+            <li>La competencia será en ramas femenil y varonil.</li>
+            <li>Cada equipo debe contar con un mínimo de 8 jugadores y un máximo de 12 registrados.</li>
+            <li>En la cancha jugarán 6 jugadores por equipo durante cada set.</li>
+          </ul>
+          <h3>2. Duración del Partido</h3>
+          <ul>
+            <li>El partido se juega al mejor de 3 sets.</li>
+            <li>Los dos primeros sets se juegan a 25 puntos cada uno, debiendo ganar con una ventaja mínima de 2 puntos.</li>
+            <li>Si se requiere un tercer set, se jugará a 15 puntos, también con una diferencia mínima de 2 puntos para ganar.</li>
+          </ul>
+          <h3>3. Reglas Básicas del Juego</h3>
+          <ul>
+            <li>El objetivo es ganar el set alcanzando el número de puntos requerido.</li>
+            <li>Los puntos se anotan en cada jugada, independientemente de quién sirva (rally point).</li>
+            <li>Un equipo puede tocar el balón hasta 3 veces antes de enviarlo al campo contrario.</li>
+            <li>No se permite que un jugador toque el balón dos veces consecutivas, excepto en un bloqueo.</li>
+          </ul>
+          <h3>4. Sustituciones</h3>
+          <ul>
+            <li>Cada equipo podrá realizar sustituciones durante el partido, hasta un máximo permitido por el reglamento oficial.</li>
+            <li>Las sustituciones deben ser autorizadas por el juez y registradas.</li>
+          </ul>
+          <h3>5. Árbitros</h3>
+          <ul>
+            <li>El partido será dirigido por un árbitro principal y un segundo árbitro, asistidos por jueces de línea y anotadores.</li>
+            <li>Las decisiones de los árbitros son definitivas durante el partido.</li>
+          </ul>
+          <h3>6. Uniforme</h3>
+          <ul>
+            <li>Los jugadores deben portar uniforme completo con número visible.</li>
+            <li>El uso de calzado adecuado para cancha es obligatorio.</li>
+          </ul>
+        </section>
+      </div>
     </main>
   </body>
 </html>
