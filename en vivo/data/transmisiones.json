@@ -1,0 +1,44 @@
+[
+  {
+    "titulo": "Ajedrez",
+    "disciplina": "Ajedrez",
+    "url": "https://www.youtube.com/watch?v=LA4Mz9jUUkk",
+    "plataforma": "youtube",
+    "espectadores": "1,245"
+  },
+  {
+    "titulo": "Fútbol Soccer",
+    "disciplina": "Fútbol",
+    "url": "https://www.youtube.com/watch?v=wh0Q4Q9i3nQ",
+    "plataforma": "facebook",
+    "espectadores": "3,892"
+  },
+  {
+    "titulo": "Atletismo",
+    "disciplina": "Atletismo",
+    "url": "https://www.instagram.com/p/example/embed",
+    "plataforma": "instagram",
+    "espectadores": "2,156"
+  },
+  {
+    "titulo": "Baloncesto",
+    "disciplina": "Baloncesto",
+    "url": "",
+    "plataforma": "youtube",
+    "espectadores": "4,532"
+  },
+  {
+    "titulo": "Voleibol",
+    "disciplina": "Voleibol",
+    "url": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fexample2%2Fvideo",
+    "plataforma": "facebook",
+    "espectadores": "1,987"
+  },
+  {
+    "titulo": "Natación",
+    "disciplina": "Natación",
+    "url": "https://www.instagram.com/p/example2/embed",
+    "plataforma": "instagram",
+    "espectadores": "3,421"
+  }
+]
