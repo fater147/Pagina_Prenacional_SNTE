@@ -1,16 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- ...existing code... -->
 
 <head>
   <title>Disciplinas</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Fondo para el encabezado de disciplina: ancho completo, sin línea abajo */
+    .fondo-disciplina {
+      background-image: url('../img/fondo_disciplinas.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Elimina border-radius y box-shadow */
+      /* border-radius: 16px; */
+      /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
+      /* Elimina margen inferior */
+      /* margin-bottom: 32px; */
+      position: relative;
+      overflow: hidden;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .fondo-disciplina::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .fondo-disciplina h2 {
+      color: #fff;
+      font-size: 3.2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 12px #000;
+      margin: 0;
+      z-index: 2;
+      position: relative;
+      letter-spacing: 2px;
+      padding: 0 32px;
+      text-align: center;
+      /* Quitar border-bottom si existiera aquí */
+      border-bottom: none;
+      padding-bottom: 0;
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <h1>Disciplinas</h1>
+  <!-- Menú de navegación -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="../index.html"><img src="../img/SNTE.png" alt="SNTE Sección 61"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../Convocatoria/convocatoria.html">Convocatoria</a></li>
+        <li><a href="Disciplinas.html" class="active">Disciplinas</a></li>
+        <li><a href="../Hoteles/hotelesof.html">Hoteles</a></li>
+        <!--<li><a href="../Organizadores y patrocinadores//patrocinadores.html">Patrocinadores</a></li>-->
+        <li><a href="../en vivo/en_vivo.html">Directos</a></li>
+      </ul>
+    </nav>
   </header>
+  <div style="height:60px"></div>
+  <!-- Encabezado centrado para disciplinas con fondo -->
+  <div class="fondo-disciplina">
+    <h2>Disciplina</h2>
+  </div>
+  <div style="height: 32px;"></div>
   <!-- Botones    -->
   <!-- Agrupación en filas de 3, 3 y 2 -->
   <div class="fila-botones">
@@ -31,7 +96,7 @@
     <div class="boton-general">
       <button class="boton-imagen">
         <img src="../img/bas.jpg" alt="basquetbol" width="100" />
-        <p>basquetboool</p>
+        <p>basquetbol</p>
       </button>
       <div class="opciones" style="display: none">
         <ul>
@@ -115,7 +180,7 @@
       </div>
     </div>
   </div>
-  <h2 class="centrado">Exhibicion</h2>
+  <h2 class="centrado" style="margin-bottom: 32px;">Exhibicion</h2>
   <!-- Exhibición: 2 y 2 -->
   <div class="fila-botones">
     <div class="boton-general">
@@ -170,5 +235,14 @@
     </div>
   </div>
   <script src="Funciones.js"></script>
+  <footer class="site-footer" style="margin-top:40px; background:#00274d; color:#fff; text-align:center; padding:18px 0; width:100vw; position:relative; left:50%; transform:translateX(-50%);">
+    <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+      <span>2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</span>
+      <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA" target="_blank" style="display:inline-block; background:#fff; border-radius:50%; padding:4px;">
+        <img src="../img/fb.png" alt="Facebook" style="width:28px; height:28px; display:block;">
+      </a>
+    </div>
+  </footer>
 </body>
+
 </html>

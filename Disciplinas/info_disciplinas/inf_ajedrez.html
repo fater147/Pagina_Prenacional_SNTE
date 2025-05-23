@@ -5,69 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información de Ajedrez</title>
   <link rel="stylesheet" href="../styles.css">
+  
+  <style>
+    /* Decoración adicional para la tarjeta de información de ajedrez (paleta unificada) */
+    .card-ajedrez {
+      background: #f8fafc;
+      border: 2px solid #003366;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+      padding: 2.5rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      position: relative;
+    }
+    .ajedrez-img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px #00336633);
+      border-radius: 12px;
+      background: #fff;
+      border: 2px solid #c8102e;
+      padding: 8px;
+    }
+    .section-title {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .card-ajedrez h3 {
+      color: #003366;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+    .card-ajedrez ul, .card-ajedrez ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card-ajedrez p {
+      margin-bottom: 1rem;
+    }
+    .divider {
+      border: none;
+      border-top: 2px solid #c8102e;
+      margin: 2rem 0;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 600px) {
+      .card-ajedrez {
+        padding: 1.2rem 0.5rem;
+      }
+      .ajedrez-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Información de Ajedrez</h1>
+  <!-- Menú de navegación igual a index.html -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="../../index.html"><img src="../../img/SNTE.png" alt="SNTE Sección 61"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
+        <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
+        <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
+        <!--<li><a href="../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>-->
+        <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <section>
-      <h2>Descripción</h2>
-      <p>
+  <div style="height:70px"></div>
+  <main class="container section">
+    <div class="card-ajedrez">
+      <img src="../../img/aje.jpeg" alt="Ajedrez" class="ajedrez-img">
+      <h1 style="text-align:center; color:#003366; margin-bottom:2rem; font-size:2.2rem; letter-spacing:1px;">Información de Ajedrez</h1>
+      <h2 class="section-title">Descripción</h2>
+      <p style="text-align:center;">
         Ajedrez en rama mixta y categoría única, se aceptarán 2 participantes por Tecnológico como máximo y se jugará el sistema Suizo.
       </p>
-    </section>
-    <section>
-        <h2>1. Reglas Generales del Juego</h2>
-  <p>Este torneo se rige por las ,Leyes del Ajedrez de la FIDE, que definen cómo se deben mover las piezas, cómo se gana o se empata una partida, el uso del reloj y el comportamiento deportivo de los jugadores.</p>
-
-  <h2>2. Sistema de Emparejamiento Suizo</h2>
-  <p>El torneo se jugará bajo el sistema suizo, que busca enfrentar a jugadores con puntuaciones similares en cada ronda. A continuación se detallan las normas específicas:</p>
-
-  <h3>2.1 Número de Rondas</h3>
-  <p>El número de rondas será definido por la organización, dependiendo del número de participantes, generalmente entre 5 y 11.</p>
-
-  <h3>2.2 Emparejamientos</h3>
-  <ul>
-    <li>En la primera ronda, se emparejan jugadores por ranking (ELO o asignación inicial).</li>
-    <li>En rondas posteriores, los jugadores se emparejan según su puntuación acumulada.</li>
-    <li>No se permite que un jugador enfrente al mismo oponente más de una vez.</li>
-  </ul>
-
-  <h3>2.3 Asignación de Colores</h3>
-  <p>Se alternarán los colores (blancas y negras) en cada ronda. Se buscará equilibrar que ningún jugador repita el mismo color más de dos veces seguidas.</p>
-
-  <h3>2.4 Sistema de Puntuación</h3>
-  <ul>
-    <li>Victoria: 1 punto</li>
-    <li>Empate: 0.5 puntos</li>
-    <li>Derrota o incomparecencia: 0 puntos</li>
-  </ul>
-
-  <h3>2.5 Criterios de Desempate</h3>
-  <p>Si varios jugadores finalizan con la misma cantidad de puntos, se aplicarán los siguientes desempates:</p>
-  <ol>
-    <li>Buchholz</li>
-    <li>Sonneborn-Berger</li>
-    <li>Resultado individual (si jugaron entre sí)</li>
-    <li>Mayor número de victorias</li>
-    <li>Mayor número de partidas con piezas negras</li>
-  </ol>
-
-  <h2>3. Control de Tiempo</h2>
-  <p>El ritmo de juego será establecido por la organización. Algunos ejemplos comunes:</p>
-  <ul>
-    <li>Clásico: 90 minutos + 30 segundos por jugada</li>
-    <li>Rápido: 15 a 30 minutos por jugador</li>
-    <li>Blitz: menos de 15 minutos</li>
-  </ul>
-
-  <h2>4. Funciones del Árbitro</h2>
-  <p>El árbitro es el encargado de realizar los emparejamientos, registrar resultados, supervisar el cumplimiento de las reglas y resolver cualquier disputa entre jugadores.</p>
-
-  <h2>5. Herramientas Digitales</h2>
-  <p>Los emparejamientos pueden realizarse con software como Swiss Manager, Vega o Tornelo, los cuales automatizan los cruces y cálculo de desempates.</p>
-    </section>
+      <hr class="divider">
+      <h2 class="section-title">1. Reglas Generales del Juego</h2>
+      <p>Este torneo se rige por las <b>Leyes del Ajedrez de la FIDE</b>, que definen cómo se deben mover las piezas, cómo se gana o se empata una partida, el uso del reloj y el comportamiento deportivo de los jugadores.</p>
+      <hr class="divider">
+      <h2 class="section-title">2. Sistema de Emparejamiento Suizo</h2>
+      <p>El torneo se jugará bajo el sistema suizo, que busca enfrentar a jugadores con puntuaciones similares en cada ronda. A continuación se detallan las normas específicas:</p>
+      <h3>Número de Rondas</h3>
+      <p>El número de rondas será definido por la organización, dependiendo del número de participantes, generalmente entre 5 y 11.</p>
+      <h3>Emparejamientos</h3>
+      <ul>
+        <li>En la primera ronda, se emparejan jugadores por ranking (ELO o asignación inicial).</li>
+        <li>En rondas posteriores, los jugadores se emparejan según su puntuación acumulada.</li>
+        <li>No se permite que un jugador enfrente al mismo oponente más de una vez.</li>
+      </ul>
+      <h3>Asignación de Colores</h3>
+      <p>Se alternarán los colores (blancas y negras) en cada ronda. Se buscará equilibrar que ningún jugador repita el mismo color más de dos veces seguidas.</p>
+      <h3>Sistema de Puntuación</h3>
+      <ul>
+        <li>Victoria: 1 punto</li>
+        <li>Empate: 0.5 puntos</li>
+        <li>Derrota o incomparecencia: 0 puntos</li>
+      </ul>
+      <h3>Criterios de Desempate</h3>
+      <p>Si varios jugadores finalizan con la misma cantidad de puntos, se aplicarán los siguientes desempates:</p>
+      <ol>
+        <li>Buchholz</li>
+        <li>Sonneborn-Berger</li>
+        <li>Resultado individual (si jugaron entre sí)</li>
+        <li>Mayor número de victorias</li>
+        <li>Mayor número de partidas con piezas negras</li>
+      </ol>
+      <hr class="divider">
+      <h2 class="section-title">3. Control de Tiempo</h2>
+      <p>El ritmo de juego será establecido por la organización. Algunos ejemplos comunes:</p>
+      <ul>
+        <li>Clásico: 90 minutos + 30 segundos por jugada</li>
+        <li>Rápido: 15 a 30 minutos por jugador</li>
+        <li>Blitz: menos de 15 minutos</li>
+      </ul>
+      <hr class="divider">
+      <h2 class="section-title">4. Funciones del Árbitro</h2>
+      <p>El árbitro es el encargado de realizar los emparejamientos, registrar resultados, supervisar el cumplimiento de las reglas y resolver cualquier disputa entre jugadores.</p>
+      <hr class="divider">
+      <h2 class="section-title">5. Herramientas Digitales</h2>
+      <p>Los emparejamientos pueden realizarse con software como <b>Swiss Manager</b>, <b>Vega</b> o <b>Tornelo</b>, los cuales automatizan los cruces y cálculo de desempates.</p>
+    </div>
   </main>
+  <footer class="site-footer" style="margin-top:40px; background:#00274d; color:#fff; text-align:center; padding:18px 0; width:100vw; position:relative; left:50%; transform:translateX(-50%);">
+    <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+      <span>2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</span>
+      <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA" target="_blank" style="display:inline-block; background:#fff; border-radius:50%; padding:4px;">
+        <img src="../../img/fb.png" alt="Facebook" style="width:28px; height:28px; display:block;">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

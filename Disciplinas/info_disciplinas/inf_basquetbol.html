@@ -5,62 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información de basquetbol</title>
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Decoración adicional para la tarjeta de información de basquetbol (paleta unificada) */
+    .card-basquetbol {
+      background: #f8fafc;
+      border: 2px solid #003366;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+      padding: 2.5rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      position: relative;
+    }
+    .basquetbol-img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px #00336633);
+      border-radius: 12px;
+      background: #fff;
+      border: 2px solid #c8102e;
+      padding: 8px;
+    }
+    .section-title {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .card-basquetbol h3 {
+      color: #003366;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+    .card-basquetbol ul, .card-basquetbol ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card-basquetbol p {
+      margin-bottom: 1rem;
+    }
+    .divider {
+      border: none;
+      border-top: 2px solid #c8102e;
+      margin: 2rem 0;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 600px) {
+      .card-basquetbol {
+        padding: 1.2rem 0.5rem;
+      }
+      .basquetbol-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Información de basquetbol</h1>
+  <header class="site-header">
+    <div class="logo">
+      <a href="../../index.html"><img src="../../img/SNTE.png" alt="SNTE Sección 61"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
+        <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
+        <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
+        <!--<li><a href="../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>-->
+        <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <section>
-      <h2>Descripción</h2>
-      <p>
-        rama femenil y varonil, se aceptarán mínimo 8 jugadores y 12 como máximo. Se jugará en 4 tiempos de 10 minutos cronometrados cada uno.
+  <div style="height:70px"></div>
+  <main class="container section">
+    <div class="card-basquetbol">
+      <img src="../../img/bas.jpg" alt="Basquetbol" class="basquetbol-img">
+      <h1 style="text-align:center; color:#003366; margin-bottom:2rem; font-size:2.2rem; letter-spacing:1px;">Información de Basquetbol</h1>
+      <h2 class="section-title">Descripción</h2>
+      <p style="text-align:center;">
+        Rama femenil y varonil, se aceptarán mínimo 8 jugadores y 12 como máximo. Se jugará en 4 tiempos de 10 minutos cronometrados cada uno.
       </p>
-    </section>
-    <section>
-      <h2>Reglamento</h2>
+      <hr class="divider">
+      <h2 class="section-title">Reglamento</h2>
       <h3>1. Participación</h3>
-  <ul>
-    <li>Podrán participar equipos de la rama femenil y varonil.</li>
-    <li>Cada equipo deberá contar con un mínimo de 8 jugadores y un máximo de 12 jugadores inscritos.</li>
-    <li>Sólo podrán estar en la cancha 5 jugadores por equipo al mismo tiempo.</li>
-  </ul>
-
-  <h3>2. Duración del Juego</h3>
-  <ul>
-    <li>El partido se jugará en 4 tiempos de 10 minutos cronometrados cada uno.</li>
-    <li>Habrá un descanso de 2 minutos entre el primer y segundo cuarto, y entre el tercer y cuarto cuarto.</li>
-    <li>El descanso de medio tiempo (entre el segundo y tercer cuarto) será de 10 minutos.</li>
-    <li>En caso de empate, se jugará un tiempo extra de 5 minutos hasta que haya un ganador.</li>
-  </ul>
-
-  <h3>3. Reglas Básicas del Juego</h3>
-  <ul>
-    <li>El objetivo del juego es anotar más puntos que el equipo contrario introduciendo el balón en el aro.</li>
-    <li>Los tiros dentro del área de 3 puntos valen 2 puntos; fuera del área valen 3 puntos; los tiros libres valen 1 punto.</li>
-    <li>El balón debe moverse mediante pases o bote (drible); no se permite caminar sin botarlo (pasos).</li>
-    <li>Está prohibido el contacto físico excesivo; las faltas personales se sancionan según su gravedad.</li>
-    <li>Después de 5 faltas personales, un jugador queda fuera del partido.</li>
-  </ul>
-
-  <h3>4. Sustituciones y Tiempos Fuera</h3>
-  <ul>
-    <li>Las sustituciones pueden hacerse en cualquier interrupción del juego, con autorización del árbitro.</li>
-    <li>Cada equipo tiene derecho a solicitar tiempos fuera estratégicos durante el partido (hasta 5 por juego).</li>
-  </ul>
-
-  <h3>5. Árbitros y Oficiales</h3>
-  <ul>
-    <li>Los partidos serán dirigidos por un cuerpo arbitral calificado.</li>
-    <li>Sus decisiones serán inapelables durante el desarrollo del juego.</li>
-  </ul>
-
-  <h3>6. Uniforme</h3>
-  <ul>
-    <li>Los equipos deberán portar uniforme deportivo adecuado con número visible al frente y al reverso.</li>
-    <li>Todos los jugadores de un equipo deberán usar el mismo color de uniforme.</li>
-  </ul>
-    </section>
+      <ul>
+        <li>Podrán participar equipos de la rama femenil y varonil.</li>
+        <li>Cada equipo deberá contar con un mínimo de 8 jugadores y un máximo de 12 jugadores inscritos.</li>
+        <li>Sólo podrán estar en la cancha 5 jugadores por equipo al mismo tiempo.</li>
+      </ul>
+      <h3>2. Duración del Juego</h3>
+      <ul>
+        <li>El partido se jugará en 4 tiempos de 10 minutos cronometrados cada uno.</li>
+        <li>Habrá un descanso de 2 minutos entre el primer y segundo cuarto, y entre el tercer y cuarto cuarto.</li>
+        <li>El descanso de medio tiempo (entre el segundo y tercer cuarto) será de 10 minutos.</li>
+        <li>En caso de empate, se jugará un tiempo extra de 5 minutos hasta que haya un ganador.</li>
+      </ul>
+      <h3>3. Reglas Básicas del Juego</h3>
+      <ul>
+        <li>El objetivo del juego es anotar más puntos que el equipo contrario introduciendo el balón en el aro.</li>
+        <li>Los tiros dentro del área de 3 puntos valen 2 puntos; fuera del área valen 3 puntos; los tiros libres valen 1 punto.</li>
+        <li>El balón debe moverse mediante pases o bote (drible); no se permite caminar sin botarlo (pasos).</li>
+        <li>Está prohibido el contacto físico excesivo; las faltas personales se sancionan según su gravedad.</li>
+        <li>Después de 5 faltas personales, un jugador queda fuera del partido.</li>
+      </ul>
+      <h3>4. Sustituciones y Tiempos Fuera</h3>
+      <ul>
+        <li>Las sustituciones pueden hacerse en cualquier interrupción del juego, con autorización del árbitro.</li>
+        <li>Cada equipo tiene derecho a solicitar tiempos fuera estratégicos durante el partido (hasta 5 por juego).</li>
+      </ul>
+      <h3>5. Árbitros y Oficiales</h3>
+      <ul>
+        <li>Los partidos serán dirigidos por un cuerpo arbitral calificado.</li>
+        <li>Sus decisiones serán inapelables durante el desarrollo del juego.</li>
+      </ul>
+      <h3>6. Uniforme</h3>
+      <ul>
+        <li>Los equipos deberán portar uniforme deportivo adecuado con número visible al frente y al reverso.</li>
+        <li>Todos los jugadores de un equipo deberán usar el mismo color de uniforme.</li>
+      </ul>
+    </div>
   </main>
+  <footer class="site-footer" style="margin-top:40px; background:#00274d; color:#fff; text-align:center; padding:18px 0; width:100vw; position:relative; left:50%; transform:translateX(-50%);">
+    <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+      <span>2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</span>
+      <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA" target="_blank" style="display:inline-block; background:#fff; border-radius:50%; padding:4px;">
+        <img src="../../img/fb.png" alt="Facebook" style="width:28px; height:28px; display:block;">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

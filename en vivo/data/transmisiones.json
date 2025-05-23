@@ -1,0 +1,38 @@
+[
+  {
+    "titulo": "Ajedrez",
+    "disciplina": "Ajedrez",
+    "url": "https://www.youtube.com/embed/LA4Mz9jUUkk",
+    "plataforma": "youtube"
+  },
+  {
+    "titulo": "Fútbol Soccer",
+    "disciplina": "Fútbol",
+    "url": "https://www.youtube.com/watch?v=wh0Q4Q9i3nQ",
+    "plataforma": "youtube"
+  },
+  {
+    "titulo": "Atletismo",
+    "disciplina": "Atletismo",
+    "url": "https://www.instagram.com/p/CpTspDDuGu8/embed",
+    "plataforma": "instagram"
+  },
+  {
+    "titulo": "Baloncesto",
+    "disciplina": "Baloncesto",
+    "url": "https://www.youtube.com/embed/LA4Mz9jUUkk",
+    "plataforma": "youtube"
+  },
+  {
+    "titulo": "Voleibol",
+    "disciplina": "Voleibol",
+    "url": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FNASA360%2Fvideos%2F10156070687381772%2F",
+    "plataforma": "facebook"
+  },
+  {
+    "titulo": "Natación",
+    "disciplina": "Natación",
+    "url": "https://www.instagram.com/p/CpTspDDuGu8/embed",
+    "plataforma": "instagram"
+  }
+]

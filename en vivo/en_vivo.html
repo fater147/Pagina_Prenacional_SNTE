@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+  style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+  img-src 'self' data: https://*;
+  media-src 'self' https://www.youtube.com https://facebook.com https://www.facebook.com https://instagram.com;
+  frame-src 'self' https://www.youtube.com https://facebook.com https://www.facebook.com https://instagram.com;
+  connect-src 'self';
+">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juegos en Vivo - ITHERMOSILLO 2025</title>
+  <link rel="stylesheet" href="estilos/en_vivo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html"><img src="../img/SNTE.png" alt="SNTE Sección 61"></a>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../Convocatoria/convocatoria.html">Convocatoria</a></li>
+      <li><a href="../Disciplinas/Disciplinas.html">Disciplinas</a></li>
+      <li><a href="../Hoteles/hotelesof.html">Hoteles</a></li>
+      <!--<li><a href="../Organizadores/index.html">Patrocinadores</a></li>-->
+      <li><a href="en_vivo.html" class="active">En Vivo</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2 class="section-title">Transmisión Principal</h2>
+    <div class="main-player">
+      <iframe id="mainPlayer" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+      <div class="stream-info" id="streamInfo">
+        <h3 id="streamTitle">Selecciona una transmisión</h3>
+        <div class="stream-meta">
+          <span id="streamPlatform"><i class="fas fa-globe"></i> Plataforma</span>
+          <span id="streamViewers"><i class="fas fa-eye"></i> 0 espectadores</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Transmisiones Disponibles</h2>
+    <div class="stream-nav">
+      <button class="nav-button" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+      <div class="stream-scroll" id="streamScroll">
+        <div id="streamList" class="stream-list"></div>
+      </div>
+      <button class="nav-button" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</p>
+    <div class="social">
+      <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="../img/icon-facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="../img/icon-instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="../img/icon-youtube.svg" alt="YouTube"></a>
+    </div>
+  </div>
+</footer>
+<script src="../en vivo/interactividad/directos.js"></script>
+</body>
+</html>
