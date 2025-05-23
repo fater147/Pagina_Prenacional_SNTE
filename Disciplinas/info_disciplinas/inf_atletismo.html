@@ -5,7 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información de atletismo</title>
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../../css22.css">
+  <style>
+    /* Decoración adicional para la tarjeta de información de atletismo (paleta unificada) */
+    .card-atletismo {
+      background: #f8fafc;
+      border: 2px solid #003366;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+      padding: 2.5rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      position: relative;
+    }
+    .atletismo-img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px #00336633);
+      border-radius: 12px;
+      background: #fff;
+      border: 2px solid #c8102e;
+      padding: 8px;
+    }
+    .section-title {
+      color: #ff6600;
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .card-atletismo h3 {
+      color: #003366;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+    .card-atletismo ul, .card-atletismo ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card-atletismo p {
+      margin-bottom: 1rem;
+    }
+    .divider {
+      border: none;
+      border-top: 2px solid #c8102e;
+      margin: 2rem 0;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 600px) {
+      .card-atletismo {
+        padding: 1.2rem 0.5rem;
+      }
+      .atletismo-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -18,76 +80,88 @@
         <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
         <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
         <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
-        <li><a href="../../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+        <!--<li><a href="../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>-->
+        <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
       </ul>
     </nav>
   </header>
   <div style="height:70px"></div>
   <main class="container section">
-    <section>
+    <div class="card-atletismo">
+      <img src="../../img/atletismo.jpg" alt="Atletismo" class="atletismo-img">
       <h1 style="text-align:center; color:#003366; margin-bottom:2rem;">Información de atletismo</h1>
-      <h2 class="section-title">Descripción</h2>
-      <p style="text-align:center;">
-        (pista y campo) rama femenil y varonil, se llevarán a cabo en las cinco categorías siguientes:
-      </p>
-      <h2 class="section-title">Categorías</h2>
-      <ul>
-        <li>Libre (hasta 29 A)</li>
-        <li>Veterano (30- 39 A)</li>
-        <li>Máster (40-49 A)</li>
-        <li>Super-master (50-59 A)</li>
-        <li>Jumbo (60 en adelante)</li>
-      </ul>
-      <p>
-        Existirán pruebas de 100 mts., 400 mts., 1,500 mts., 5,000 mts. y 10,000 mts.<br>
-        * Calificarán al evento nacional los primeros lugares.
-      </p>
-    </section>
-    <section>
-      <h2 class="section-title">Reglamento</h2>
-      <h3>1. Principios Generales</h3>
-      <ul>
-        <li>El atletismo se divide en carreras, saltos, lanzamientos, pruebas combinadas y marcha.</li>
-        <li>Todos los atletas deben competir bajo condiciones equitativas, siguiendo las reglas oficiales.</li>
-        <li>El reglamento es establecido por World Athletics (antiguamente IAAF).</li>
-      </ul>
-      <h3>2. Indumentaria</h3>
-      <ul>
-        <li>Los atletas deben usar vestimenta adecuada con el número oficial visible.</li>
-        <li>El uso de zapatillas especiales está permitido siempre que cumplan con la normativa.</li>
-      </ul>
-      <h3>3. Salidas en Carreras</h3>
-      <ul>
-        <li>En carreras de hasta 400 metros, se usa salida baja con tacos de salida.</li>
-        <li>Una salida en falso puede llevar a descalificación inmediata.</li>
-      </ul>
-      <h3>4. Reglas de Campo (Saltos y Lanzamientos)</h3>
-      <ul>
-        <li>Cada atleta tiene un número limitado de intentos (generalmente 3 a 6).</li>
-        <li>En saltos, el intento es válido si se despega desde la tabla o zona permitida.</li>
-        <li>En lanzamientos, el implemento debe caer dentro del sector reglamentario.</li>
-      </ul>
-      <h3>5. Jueces y Oficiales</h3>
-      <ul>
-        <li>Las competiciones deben contar con jueces certificados.</li>
-        <li>Las decisiones de los jueces son definitivas, salvo apelación formal.</li>
-      </ul>
-      <h3>6. Conducta Deportiva</h3>
-      <ul>
-        <li>Se espera un comportamiento respetuoso entre atletas, jueces y espectadores.</li>
-        <li>Cualquier conducta antideportiva puede llevar a sanciones o descalificación.</li>
-      </ul>
-      <h3>7. Dopaje</h3>
-      <ul>
-        <li>Está estrictamente prohibido el uso de sustancias que mejoren el rendimiento de forma artificial.</li>
-        <li>Se realizan controles antidopaje antes y después de las competencias.</li>
-      </ul>
-      <h3>8. Clasificación</h3>
-      <ul>
-        <li>La posición final se determina por el tiempo (carreras) o la distancia/altura (campo).</li>
-        <li>En caso de empate, se aplican criterios específicos según la disciplina.</li>
-      </ul>
-    </section>
+      <section>
+        <h2 class="section-title">Descripción</h2>
+        <p style="text-align:center;">
+          (pista y campo) rama femenil y varonil, se llevarán a cabo en las cinco categorías siguientes:
+        </p>
+        <h2 class="section-title">Categorías</h2>
+        <ul>
+          <li>Libre (hasta 29 A)</li>
+          <li>Veterano (30- 39 A)</li>
+          <li>Máster (40-49 A)</li>
+          <li>Super-master (50-59 A)</li>
+          <li>Jumbo (60 en adelante)</li>
+        </ul>
+        <p>
+          Existirán pruebas de 100 mts., 400 mts., 1,500 mts., 5,000 mts. y 10,000 mts.<br>
+          * Calificarán al evento nacional los primeros lugares.
+        </p>
+      </section>
+      <section>
+        <h2 class="section-title">Reglamento</h2>
+        <h3>1. Principios Generales</h3>
+        <ul>
+          <li>El atletismo se divide en carreras, saltos, lanzamientos, pruebas combinadas y marcha.</li>
+          <li>Todos los atletas deben competir bajo condiciones equitativas, siguiendo las reglas oficiales.</li>
+          <li>El reglamento es establecido por World Athletics (antiguamente IAAF).</li>
+        </ul>
+        <h3>2. Indumentaria</h3>
+        <ul>
+          <li>Los atletas deben usar vestimenta adecuada con el número oficial visible.</li>
+          <li>El uso de zapatillas especiales está permitido siempre que cumplan con la normativa.</li>
+        </ul>
+        <h3>3. Salidas en Carreras</h3>
+        <ul>
+          <li>En carreras de hasta 400 metros, se usa salida baja con tacos de salida.</li>
+          <li>Una salida en falso puede llevar a descalificación inmediata.</li>
+        </ul>
+        <h3>4. Reglas de Campo (Saltos y Lanzamientos)</h3>
+        <ul>
+          <li>Cada atleta tiene un número limitado de intentos (generalmente 3 a 6).</li>
+          <li>En saltos, el intento es válido si se despega desde la tabla o zona permitida.</li>
+          <li>En lanzamientos, el implemento debe caer dentro del sector reglamentario.</li>
+        </ul>
+        <h3>5. Jueces y Oficiales</h3>
+        <ul>
+          <li>Las competiciones deben contar con jueces certificados.</li>
+          <li>Las decisiones de los jueces son definitivas, salvo apelación formal.</li>
+        </ul>
+        <h3>6. Conducta Deportiva</h3>
+        <ul>
+          <li>Se espera un comportamiento respetuoso entre atletas, jueces y espectadores.</li>
+          <li>Cualquier conducta antideportiva puede llevar a sanciones o descalificación.</li>
+        </ul>
+        <h3>7. Dopaje</h3>
+        <ul>
+          <li>Está estrictamente prohibido el uso de sustancias que mejoren el rendimiento de forma artificial.</li>
+          <li>Se realizan controles antidopaje antes y después de las competencias.</li>
+        </ul>
+        <h3>8. Clasificación</h3>
+        <ul>
+          <li>La posición final se determina por el tiempo (carreras) o la distancia/altura (campo).</li>
+          <li>En caso de empate, se aplican criterios específicos según la disciplina.</li>
+        </ul>
+      </section>
+    </div>
   </main>
+  <footer class="site-footer" style="margin-top:40px; background:#00274d; color:#fff; text-align:center; padding:18px 0; width:100vw; position:relative; left:50%; transform:translateX(-50%);">
+    <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+      <span>2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</span>
+      <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA" target="_blank" style="display:inline-block; background:#fff; border-radius:50%; padding:4px;">
+        <img src="../../img/fb.png" alt="Facebook" style="width:28px; height:28px; display:block;">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
