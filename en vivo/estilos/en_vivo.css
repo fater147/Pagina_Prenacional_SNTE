@@ -387,4 +387,21 @@ body {
   vertical-align: middle;
   margin-right: 6px;
 }
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.nav-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #eee;
+}
 
