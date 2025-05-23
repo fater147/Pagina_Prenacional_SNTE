@@ -162,9 +162,7 @@ h2 {
   margin-top: 40px;
   color: var(--section-title);
   font-weight: bold;
-  border-bottom: 2px solid var(--primary-accent);
   display: inline-block;
-  padding-bottom: 5px;
 }
 
 .fila-botones {

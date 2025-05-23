@@ -5,7 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Información de poesia</title>
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../../css22.css" />
+    <style>
+      /* Decoración adicional para la tarjeta de información de poesía (paleta unificada) */
+      .card-poesia {
+        background: #f8fafc;
+        border: 2px solid #003366;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0,39,77,0.08);
+        padding: 2.5rem 2rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        position: relative;
+      }
+      .poesia-img {
+        display: block;
+        margin: 0 auto 1.5rem auto;
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 8px #00336633);
+        border-radius: 12px;
+        background: #fff;
+        border: 2px solid #c8102e;
+        padding: 8px;
+      }
+      .section-title {
+        color: #ff6600;
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .card-poesia h3 {
+        color: #003366;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.15rem;
+      }
+      .card-poesia ul, .card-poesia ol {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      .card-poesia p {
+        margin-bottom: 1rem;
+      }
+      .divider {
+        border: none;
+        border-top: 2px solid #c8102e;
+        margin: 2rem 0;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 600px) {
+        .card-poesia {
+          padding: 1.2rem 0.5rem;
+        }
+        .poesia-img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -18,55 +80,59 @@
           <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
           <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
           <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
-          <li><a href="../../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+          <!--<li><a href="../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>-->
+          <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
         </ul>
       </nav>
     </header>
     <div style="height:70px"></div>
     <main class="container section">
-      <section>
+      <div class="card-poesia">
+        <img src="../../img/oral.png" alt="Poesía" class="poesia-img">
         <h1 style="text-align:center; color:#003366; margin-bottom:2rem;">Información de poesía</h1>
-        <h2 class="section-title">Descripción</h2>
-        <p style="text-align:center;">
-          La poesía es una forma artística que utiliza el lenguaje para expresar
-          emociones, ideas y pensamientos de manera rítmica y estética. Es un
-          medio para explorar la creatividad, la sensibilidad y la profundidad
-          humana, conectando al autor y al lector a través de imágenes,
-          metáforas y simbolismos.
-        </p>
-      </section>
-      <section>
-        <h2 class="section-title">Poesía Mexicana</h2>
-        <p>
-          La poesía mexicana es una expresión literaria que refleja la historia,
-          cultura y diversidad del país. A través de sus versos, los poetas
-          mexicanos han explorado temas como la identidad, la naturaleza, el
-          amor, la justicia social y las tradiciones, creando una rica tradición
-          que va desde la época prehispánica hasta la contemporánea.
-        </p>
-        <ul>
-          <li>
-            Poema Nahua - Poesía de las culturas indígenas, con un fuerte
-            vínculo con la naturaleza y la cosmovisión ancestral.
-          </li>
-          <li>
-            Romanticismo - Movimiento que exploró el sentimiento y la libertad,
-            con poetas como Manuel Acuña.
-          </li>
-          <li>
-            Modernismo - Representado por poetas como Amado Nervo, que renovaron
-            el lenguaje poético con simbolismo y musicalidad.
-          </li>
-          <li>
-            Contemporánea - Incluye diversas corrientes y voces actuales que
-            abordan temas sociales, políticos y personales.
-          </li>
-          <li>
-            Poema Social - Expresa la lucha y las injusticias sociales, con
-            figuras como Octavio Paz y Rosario Castellanos.
-          </li>
-        </ul>
-      </section>
+        <section>
+          <h2 class="section-title">Descripción</h2>
+          <p style="text-align:center;">
+            La poesía es una forma artística que utiliza el lenguaje para expresar
+            emociones, ideas y pensamientos de manera rítmica y estética. Es un
+            medio para explorar la creatividad, la sensibilidad y la profundidad
+            humana, conectando al autor y al lector a través de imágenes,
+            metáforas y simbolismos.
+          </p>
+        </section>
+        <section>
+          <h2 class="section-title">Poesía Mexicana</h2>
+          <p>
+            La poesía mexicana es una expresión literaria que refleja la historia,
+            cultura y diversidad del país. A través de sus versos, los poetas
+            mexicanos han explorado temas como la identidad, la naturaleza, el
+            amor, la justicia social y las tradiciones, creando una rica tradición
+            que va desde la época prehispánica hasta la contemporánea.
+          </p>
+          <ul>
+            <li>
+              Poema Nahua - Poesía de las culturas indígenas, con un fuerte
+              vínculo con la naturaleza y la cosmovisión ancestral.
+            </li>
+            <li>
+              Romanticismo - Movimiento que exploró el sentimiento y la libertad,
+              con poetas como Manuel Acuña.
+            </li>
+            <li>
+              Modernismo - Representado por poetas como Amado Nervo, que renovaron
+              el lenguaje poético con simbolismo y musicalidad.
+            </li>
+            <li>
+              Contemporánea - Incluye diversas corrientes y voces actuales que
+              abordan temas sociales, políticos y personales.
+            </li>
+            <li>
+              Poema Social - Expresa la lucha y las injusticias sociales, con
+              figuras como Octavio Paz y Rosario Castellanos.
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
   </body>
 </html>
