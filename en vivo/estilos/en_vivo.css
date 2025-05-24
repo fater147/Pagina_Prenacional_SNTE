@@ -404,4 +404,9 @@ body {
 .nav-button:hover {
   background-color: #eee;
 }
-
+@media only screen and (max-width: 768px) {
+  #prevBtn,
+  #nextBtn {
+    display: none;
+  }
+}
