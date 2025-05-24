@@ -14,7 +14,7 @@
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="Convocatoria/convocatoria.html">Convocatoria</a></li>
         <li><a href="Disciplinas/Disciplinas.html">Disciplinas</a></li>
         <li><a href="Hoteles/hotelesof.html">Hoteles</a></li>
@@ -37,7 +37,7 @@
   <section id="convocatoria" class="section convocatoria">
     <div class="container">
       <h2>Convocatoria del XI Evento Pre-Nacional Cultural y Deportivo</h2>
-      <p>El Tecnológico Nacional de México Instituto Tecnológico de Hermosillo, con el propósito de fomentar la convivencia y fraternal competencia entre los trabajadores de los Institutos Tecnológicos, el Comité Ejecutivo Delegacional D-V-97 de la Sección 61 del SNTE, emite la presente invitacion a participar al evento  XI Evento Pre-Nacional Cultural y Deportivo de este año
+      <p>El Tecnológico Nacional de México y El Instituto Tecnológico de Hermosillo, con el propósito de fomentar la convivencia y fraternal competencia entre los trabajadores de los Institutos Tecnológicos, el Comité Ejecutivo Delegacional D-V-97 de la Sección 61 del SNTE, emite la presente invitacion a participar en el XI Evento Pre-Nacional Cultural y Deportivo de este año
 </p>
     </div>
   </section>
@@ -55,7 +55,7 @@
       </div>
       <div class="card" style="background-image: url('img/baloncesto.jpg')">
         <div class="overlay">
-          <h3>Basquetbol</h3>
+          <h3>Básquetbol </h3>
           <p>Varonil y femenil. 8–12 jugadores. 4 tiempos de 10 min.</p>
         </div>
       </div>
@@ -68,7 +68,7 @@
       <div class="card" style="background-image: url('img/futbol.jpg')">
         <div class="overlay">
           <h3>Fútbol Soccer</h3>
-          <p>Varonil. 15–22 jugadores. 2 tiempos de 35 min.</p>
+          <p>Varonil. 11–22 jugadores. 2 tiempos de 45 min.</p>
         </div>
       </div>
       <div class="card" style="background-image: url('img/voleivol.jpg')">
@@ -92,14 +92,14 @@
       </div>
        <div class="card" style="background-image: url('img/musica.jpg')">
         <div class="overlay">
-          <h3>Musica</h3>
+          <h3>Música</h3>
           <p>Participación libre para todas las edades</p>
           <p>Se aceptan grupos musicales o corales</p>
         </div>
       </div>
        <div class="card" style="background-image: url('img/poesia.jpg')">
         <div class="overlay">
-          <h3>Poesia</h3>
+          <h3>Poesía</h3>
           <p>Participación libre para todas las edades</p>
           <p>puede ser individual o en grupo</p>
           <p> permite poesía original o interpretativa</p>
@@ -188,7 +188,26 @@
     <div class="container">
       <p>&copy; 2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</p>
       <div class="social">
-        <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="icon-facebook.svg" alt="Facebook"></a>
+        <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="img/icon-facebook.svg" alt="Facebook"></a>
       </div>
     </div>
+    <script>
+  // Obtener la ruta actual
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  
+  // Seleccionar todos los enlaces de navegación
+  const navLinks = document.querySelectorAll('.main-nav a');
+  
+  // Recorrer los enlaces y añadir la clase active al correspondiente
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href').split('/').pop();
+    
+    // Comprobar si el enlace coincide con la página actual
+    if (currentPath === linkPath || 
+        (currentPath === '' && linkPath === 'index.html') ||
+        (currentPath.includes('hoteles') && linkPath.includes('hoteles'))) {
+      link.classList.add('active');
+    }
+  });
+</script>
   </footer>

@@ -46,6 +46,7 @@ text-decoration: underline;
 
 .main-nav .active {
 border-bottom: 4px solid #c8102e;
+color: #fdfaf8 ;
 }
 
 .main-nav a:hover,
@@ -409,4 +410,7 @@ body {
   #nextBtn {
     display: none;
   }
+}
+.site-footer{
+  text-align: center;
 }

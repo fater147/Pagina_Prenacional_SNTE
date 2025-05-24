@@ -13,7 +13,7 @@
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="../index.html" class="active">Inicio</a></li>
+        <li><a href="../index.html">Inicio</a></li>
         <li><a href="../Convocatoria/convocatoria.html">Convocatoria</a></li>
         <li><a href="../Disciplinas/Disciplinas.html">Disciplinas</a></li>
         <li><a href="../Hoteles/hotelesof.html">Hoteles</a></li>
@@ -299,6 +299,24 @@
 </section>
 </section>
 <script>
+  // Obtener la ruta actual
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  
+  // Seleccionar todos los enlaces de navegación
+  const navLinks = document.querySelectorAll('.main-nav a');
+  
+  // Recorrer los enlaces y añadir la clase active al correspondiente
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href').split('/').pop();
+    
+    // Comprobar si el enlace coincide con la página actual
+    if (currentPath === linkPath || 
+        (currentPath === '' && linkPath === 'index.html') ||
+        (currentPath.includes('hoteles') && linkPath.includes('hoteles'))) {
+      link.classList.add('active');
+    }
+  });
+  
   const slider = document.querySelector('.visit-slider');
   let scrollAmount = 0;
 
