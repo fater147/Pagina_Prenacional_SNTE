@@ -10,26 +10,21 @@ const viewersBase = {
 function convertirUrlEmbebida(url) {
   if (!url) return '';
 
-  // YouTube: convierte watch?v=ID en embed/ID
   if (url.includes("youtube.com/watch?v=")) {
     const videoId = url.split("v=")[1]?.split("&")[0];
     return `https://www.youtube.com/embed/${videoId}`;
   }
 
-  // Facebook: convierte URL normal en plugin de video
   if (url.includes("facebook.com") && !url.includes("plugins/video.php")) {
     return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=0&autoplay=1`;
   }
 
-  // Instagram: añade /embed si no lo tiene
   if (url.includes("instagram.com") && !url.includes("/embed")) {
     return url.endsWith("/") ? `${url}embed` : `${url}/embed`;
   }
 
-  // Si ya está embebida o es otra plataforma aceptada
   return url;
 }
-
 
 // Verificar que la URL es segura para usar en iframe
 function esUrlSegura(url) {
@@ -67,7 +62,7 @@ async function cargarTransmisiones() {
           viewersElement.textContent = nuevosEspectadores.toLocaleString();
         }
         if (card.classList.contains('active')) {
-          streamViewers.innerHTML = `<i class="fas fa-eye"></i> ${nuevosEspectadores.toLocaleString()}`;
+          streamViewers.innerHTML = `<img src="../img/icon-view.png" alt="Vistas" class="view-icon" /> ${nuevosEspectadores.toLocaleString()}`;
         }
       });
     }
@@ -82,13 +77,16 @@ async function cargarTransmisiones() {
       }
 
       streamTitle.textContent = transmision.titulo;
-      streamPlatform.innerHTML = `<i class="fab fa-${transmision.plataforma}"></i> ${transmision.plataforma.charAt(0).toUpperCase() + transmision.plataforma.slice(1)}`;
+      streamPlatform.innerHTML = `
+        <img src="../img/icon-${transmision.plataforma}.svg" alt="${transmision.plataforma}" class="platform-icon-img" />
+        ${transmision.plataforma.charAt(0).toUpperCase() + transmision.plataforma.slice(1)}
+      `;
 
       const espectadoresIniciales = generarEspectadores(
         transmision.plataforma,
         viewersBase[transmision.plataforma]
       );
-      streamViewers.innerHTML = `<i class="fas fa-eye"></i> ${espectadoresIniciales.toLocaleString()}`;
+      streamViewers.innerHTML = `<img src="../img/icon-view.png" alt="Vistas" class="view-icon"/> ${espectadoresIniciales.toLocaleString()}`;
     }
 
     transmisiones.forEach((transmision, index) => {
@@ -99,11 +97,11 @@ async function cargarTransmisiones() {
         viewersBase[transmision.plataforma]
       );
       card.innerHTML = `
-        <i class="fab fa-${transmision.plataforma} platform-icon ${transmision.plataforma}"></i>
+        <img src="../img/icon-${transmision.plataforma}.svg" alt="${transmision.plataforma}" class="platform-icon-img" />
         <h3>${transmision.titulo}</h3>
         <p>${transmision.disciplina}</p>
         <div class="viewers">
-          <i class="fas fa-eye"></i>
+            <img src="../img/icon-view.png" alt="Vistas" class="view-icon" />
           <span class="viewers-count">${espectadoresIniciales.toLocaleString()}</span>
         </div>
       `;
