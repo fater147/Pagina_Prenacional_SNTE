@@ -13,7 +13,7 @@
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="../index.html" class="active">Inicio</a></li>
+        <li><a href="../index.html">Inicio</a></li>
         <li><a href="../Convocatoria/convocatoria.html">Convocatoria</a></li>
         <li><a href="../Disciplinas/Disciplinas.html">Disciplinas</a></li>
         <li><a href="../Hoteles/hotelesof.html">Hoteles</a></li>
@@ -31,7 +31,7 @@
   <main class="container">
     <section class="intro">
       <h2 class="section-title">🏨 Opciones de hospedaje cercanas</h2>
-      <p>Te damos la bienvenida a Hermosillo para el <strong>XI Evento Nacional Cultural y Deportivo</strong> de la Sección 61 del SNTE. Aquí te mostramos una selección de hoteles con ubicación cercana al <strong>Aeropuerto Internacional de Hermosillo</strong>, para facilitar tu llegada y estancia.</p>
+      <p>Te damos la bienvenida a Hermosillo para el <strong>XI Evento Pre-Nacional Cultural y Deportivo</strong> de la Sección 61 del SNTE. Aquí te mostramos una selección de hoteles con ubicación cercana al <strong>Aeropuerto Internacional de Hermosillo</strong>, para facilitar tu llegada y estancia.</p>
     </section>
     <br>
     <br>
@@ -190,12 +190,12 @@
         <p>Uno de los miradores con mejor vista oceanica.</p>
       </div>
     </div>
-    <div class="visit-item" style="background-image: url('../img/carlos.jpeg');">
+   <!--<div class="visit-item" style="background-image: url('../img/carlos.jpeg');">
       <div class="visit-info">
         <h3>Mirador San Carlos</h3>
         <p>Uno de los miradores con mejor vista oceanica.</p>
       </div>
-    </div>
+    </div>-->
      <div class="visit-item" style="background-image: url('../img/kino.jpeg');">
       <div class="visit-info">
         <h3>Bahia De kino</h3>
@@ -299,6 +299,24 @@
 </section>
 </section>
 <script>
+  // Obtener la ruta actual
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  
+  // Seleccionar todos los enlaces de navegación
+  const navLinks = document.querySelectorAll('.main-nav a');
+  
+  // Recorrer los enlaces y añadir la clase active al correspondiente
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href').split('/').pop();
+    
+    // Comprobar si el enlace coincide con la página actual
+    if (currentPath === linkPath || 
+        (currentPath === '' && linkPath === 'index.html') ||
+        (currentPath.includes('hoteles') && linkPath.includes('hoteles'))) {
+      link.classList.add('active');
+    }
+  });
+  
   const slider = document.querySelector('.visit-slider');
   let scrollAmount = 0;
 
