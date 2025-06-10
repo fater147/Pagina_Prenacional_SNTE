@@ -1,47 +1,460 @@
--<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="patrocinadores.css">
-    <title>Patrocinadores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrocinadores del Evento</title>
+    <style>
+        /* --- PALETA DE COLORES --- */
+        :root {
+            --azul-profundo: #0D2C54;
+            --azul-principal: #1E3A5F;
+            --naranja-acento: #FF6700;
+            --gris-fondo: #f4f6f9;
+            --blanco-puro: #ffffff;
+            --texto-gris: #555;
+            --borde-suave: #e0e7ff;
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background-color: var(--gris-fondo);
+            color: var(--texto-gris);
+        }
+
+        /* --- ENCABEZADO Y NAVEGACIÓN --- */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color: var(--azul-profundo);
+            color: var(--blanco-puro);
+        }
+        .site-header .logo {
+            display: flex;
+            align-items: center;
+        }
+        .site-header .logo img {
+            height: 48px;
+            max-width: 120px;
+            display: block;
+        }
+        .site-header h1 {
+            font-size: 1.8em;
+            margin: 0 20px;
+            color: var(--blanco-puro);
+        }
+        .main-nav {
+            margin-top: 10px;
+        }
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #E0E0E0;
+            font-weight: bold;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .main-nav a:hover {
+            border-bottom-color: white;
+            /* El color del texto NO cambia */
+        }
+        .main-nav a.active {
+            color: var(--naranja-acento);
+            border-bottom-color: white;
+        }
+        /* Línea roja fija debajo de "Patrocinadores" en el menú */
+        .main-nav a[data-menu-patrocinadores] {
+            position: relative;
+        }
+        .main-nav a[data-menu-patrocinadores].active {
+            color: #E0E0E0; /* Mantiene el color original aunque esté activa */
+        }
+        .main-nav a[data-menu-patrocinadores]::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            height: 3px;
+            background: red;
+            border-radius: 2px;
+        }
+        /* --- Ajuste de tamaño para imágenes del catálogo --- */
+        .producto img {
+            width: 100%;
+            max-width: 320px;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--borde-suave);
+            margin: 0 auto;
+            display: block;
+        }
+        /* --- Ajuste de tamaño para logos de patrocinadores --- */
+        .logos-patrocinadores img {
+            max-height: 70px;
+            max-width: 140px;
+            width: auto;
+            height: auto;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+        .logos-patrocinadores .perfil {
+            max-height: 100px;
+            max-width: 100px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        main > h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--azul-principal);
+            margin-bottom: 40px;
+        }
+
+        /* --- SECCIÓN DE PATROCINADOR 'RENT A CAR' --- */
+        .sponsor-section {
+            margin-bottom: 50px;
+        }
+        .banner-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background: #fff;
+            height: 500px; /* Más grande */
+        }
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Muestra la imagen completa y grande */
+            display: block;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .catalogo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px; 
+        }
+        .producto {
+            background-color: var(--blanco-puro);
+            border: 1px solid var(--borde-suave);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(30, 58, 95, 0.08);
+            overflow: hidden;
+            width: calc(48% - 25px);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .producto:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(30, 58, 95, 0.12);
+        }
+        .producto h3 {
+            margin: 20px 0 10px;
+            color: var(--azul-principal);
+            font-size: 1.4em;
+        }
+        .producto p {
+            font-size: 1.1em; /* Un poco más grande para la capacidad */
+            color: var(--texto-gris);
+            padding: 0 20px 20px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* --- SECCIÓN OTROS PATROCINADORES --- */
+        .otros-patrocinadores {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--blanco-puro);
+            border-radius: 12px;
+            margin-bottom: 50px;
+        }
+        .otros-patrocinadores h2 {
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: var(--azul-principal);
+        }
+        .logos-patrocinadores {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .logos-patrocinadores img {
+            max-height: 70px;
+            max-width: 140px;
+            width: auto;
+            height: auto;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+        .logos-patrocinadores img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .logos-patrocinadores .perfil {
+             max-height: 100px;
+             max-width: 100px;
+             width: 100px;
+             height: 100px;
+             border-radius: 50%;
+             object-fit: cover;
+        }
+
+        /* --- FOOTER --- */
+        .site-footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            background-color: var(--azul-profundo);
+            color: #A9B4C2;
+        }
+        .site-footer p {
+            margin: 0;
+        }
+        .site-footer a {
+            color: var(--blanco-puro);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .site-footer a:hover {
+            color: var(--naranja-acento);
+        }
+
+        /* --- RESPONSIVIDAD --- */
+        @media (max-width: 768px) {
+            .site-header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .site-nav {
+                margin-top: 15px;
+            }
+            .site-nav a {
+                margin: 0 8px;
+            }
+            .producto {
+                width: 100%;
+            }
+            .producto img {
+                max-width: 100%;
+                height: 140px;
+            }
+            .logos-patrocinadores img,
+            .logos-patrocinadores .perfil {
+                max-width: 80px;
+                max-height: 60px;
+                height: auto;
+                width: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Patrocinadores del evento</h1>
     
-    <img src="/Organizadores/Patrocinadores/images/fondo.jpg" class="logotop">
-    <img src="/Organizadores/Patrocinadores/images/snte.png" class="snte">
-    
-    <img src="/Organizadores/Patrocinadores/images/Sergio.jpeg" class="litiosister">
-    <a href="https://www.instagram.com/tecnmhermosillo/">
-        <img src="/Organizadores/Patrocinadores/images/ig.png" class="ig">
-    </a>
-    <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA">
-        <img src="/Organizadores/Patrocinadores/images/fb.png" class="fb">
-    </a>
-    <a href="../index.html" class="inicio">
-    <P>Inicio</P>
-    </a>
-    <a href="../Convocatoria/convocatoria.html" class="Convocatoria" target="_blank">
-        <p>Convocatoria</p>
-    </a>
-    <a href="../../Disciplinas/disciplinas.html" class="Disciplinas" target="_blank">
-        <p>Disciplinas</p>
-    </a>
-    <a href="../../Hoteles/hotelesof.html" class="Hoteles" target="_blank">
-    <p>Hoteles</p>
-    </a>
-    <a class="Patrocinadores" target="_blank">
-        <p>Patrocinadores</p>
-    </a>
-    <a href="link" class="raya">
-    raya
-    </a>
+    <header class="site-header">
+        <div class="logo">
+          <a href="../index.html"><img src="../img/SNTE.png" alt="SNTE Sección 61"></a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Convocatoria/convocatoria.html">Convocatoria</a></li>
+            <li><a href="../Disciplinas/Disciplinas.html">Disciplinas</a></li>
+            <li><a href="../Hoteles/hotelesof.html">Hoteles</a></li>
+            <li><a href="Patrocinadores.html" data-menu-patrocinadores>Patrocinadores</a></li>
+            <li><a href="../en vivo/en_vivo.html">Directos</a></li>
+          </ul>
+        </nav>
+    </header>
 
-    <hr class="Linea1">
-    <hr class="Linea2">
+    <main>
+        <!-- <h2>Patrocinador Principal</h2> -->
+        <section class="sponsor-section">
+            <h2 style="
+                text-align: center;
+                font-size: 3em;
+                color: var(--azul-principal);
+                font-weight: bold;
+                margin-top: 0;
+                margin-bottom: 40px;
+                letter-spacing: 1px;
+            ">
+                Patrocinador principal
+            </h2>
+            <!-- Logo y nombre de la empresa con mejor presentación -->
+            <div id="empresa-info-container" style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 40px;
+                cursor: pointer;
+            " onclick="mostrarInfoEmpresa()">
+                <div style="
+                    background: #fff;
+                    border-radius: 16px;
+                    box-shadow: 0 4px 16px rgba(30,58,95,0.10);
+                    padding: 24px 32px 18px 32px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 420px;
+                    width: 100%;
+                    transition: box-shadow 0.2s;
+                ">
+                    <img src="../img/rentcar.jpg" alt="Rent a Car Logo"
+                        style="max-width: 260px; width: 100%; border-radius: 12px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <span style="
+                        font-size: 2em;
+                        color: var(--azul-principal);
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        text-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                        margin-bottom: 0;
+                    ">
+                        Rent a Car
+                    </span>
+                </div>
+                <div id="info-negocio" style="
+                    display: none;
+                    margin-top: 22px;
+                    background: #f8fafc;
+                    border-radius: 12px;
+                    box-shadow: 0 2px 8px rgba(30,58,95,0.08);
+                    padding: 18px 24px;
+                    max-width: 420px;
+                    color: #333;
+                    font-size: 1.1em;
+                    text-align: left;
+                ">
+                    <strong>Rent a Car</strong> es una empresa de renta de vehículos en Hermosillo, Sonora. Ofrece unidades modernas, seguras y cómodas para grupos y empresas.<br>
+                    <b>Contacto:</b> 6621140147 ing. Hiram Acuña <br>
+                    <b>Dirección:</b> Blvd Vildosola 40 col Villa de seris. Hermosillo, Sonora.<br>
+                </div>
+                <span id="info-hint" style="margin-top:10px; color:#888; font-size:0.95em;">Haz clic para ver información del negocio</span>
+            </div>
+            <div class="catalogo-container">
+                <div class="producto">
+                    <img src="../img/vehiculo_chevrolet.jpg" alt="Chevrolet Express Van">
+                    <h3>Chevrolet Express Van</h3>
+                    <p>Capacidad: 12 personas</p>
+                </div>
+                <div class="producto">
+                    <img src="../img/vehiculo_urvan_2021.jpg" alt="Nissan Urvan 2021">
+                    <h3>Nissan Urvan 2021</h3>
+                    <p>Capacidad: 15 personas</p>
+                </div>
+                <div class="producto">
+                    <img src="../img/vehiculo_urvan_2023.jpg" alt="Nissan Urvan 2023">
+                    <h3>Nissan Urvan 2023</h3>
+                    <p>Capacidad: 14 personas</p>
+                </div>
+                <div class="producto">
+                    <img src="../img/vehiculo_jac_sunray.jpg" alt="JAC Sunray 2025">
+                    <h3>JAC Sunray 2025</h3>
+                    <p>Capacidad: 17 personas</p>
+                </div>
+            </div>
+            <!-- Nueva sección de cotizaciones -->
+            <section style="margin: 50px auto 0 auto; max-width: 700px;">
+                <h2 style="text-align:center; color: var(--azul-principal); font-size:2em; margin-bottom: 25px; margin-top:0;">
+                    Cotizaciones
+                </h2>
+                <div style="
+                    background: #fff;
+                    border-radius: 14px;
+                    box-shadow: 0 4px 16px rgba(30,58,95,0.10);
+                    padding: 24px 16px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                ">
+                    <img src="../img/cotizacion.jpg" alt="Cotizaciones Rent a Car"
+                        style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                </div>
+            </section>
+        </section>
 
-    <p class="Hermana-Litio">Alba Soots</p>
-    <div class="cuadroabajo"></div>
-    <p class="final">p</p>
-    <p class="textofinal">© 2025 Sección 61 SNTE - Instituto Tecnológico de Hermosillo</p>
+        <section class="otros-patrocinadores">
+            <h2>Nuestros Colaboradores</h2>
+            <div class="logos-patrocinadores">
+                <a href="https://www.instagram.com/tecnmhermosillo/"><img src="../img/ig.png" alt="Logo Instagram"></a>
+                <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="../img/fb.png" alt="Logo Facebook"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Sección 61 SNTE - <a href="http://www.ith.mx/">Instituto Tecnológico de Hermosillo</a></p>
+    </footer>
+    <script>
+      // Obtener la ruta actual
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      
+      // Seleccionar todos los enlaces de navegación
+      const navLinks = document.querySelectorAll('.main-nav a');
+      
+      // Recorrer los enlaces y añadir la clase active al correspondiente
+      navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href').split('/').pop();
+        
+        // Comprobar si el enlace coincide con la página actual
+        if (
+          (currentPath === linkPath) ||
+          (currentPath === '' && linkPath === 'index.html') ||
+          (currentPath.includes('hoteles') && linkPath.includes('hoteles')) ||
+          (currentPath.includes('patrocinadores') && linkPath.includes('patrocinadores')) ||
+          (currentPath.includes('en_vivo') && linkPath.includes('en_vivo'))
+        ) {
+          link.classList.add('active');
+        }
+      });
+
+      function mostrarInfoEmpresa() {
+        const info = document.getElementById('info-negocio');
+        const hint = document.getElementById('info-hint');
+        if (info.style.display === 'none' || info.style.display === '') {
+          info.style.display = 'block';
+          hint.textContent = 'Haz clic para ocultar información';
+        } else {
+          info.style.display = 'none';
+          hint.textContent = 'Haz clic para ver información del negocio';
+        }
+      }
+    </script>
 </body>
 </html>
