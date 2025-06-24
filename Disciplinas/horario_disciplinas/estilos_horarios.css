@@ -1,0 +1,292 @@
+/* === FONDO Y GENERAL === */
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+/* === ENCABEZADOS === */
+h1, h2, h3, h4 {
+  color: #ff9800;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3, h4 {
+  font-size: 1.2rem;
+  color: #ff9800;
+  border-bottom: 3px solid #ff9800;
+  display: block;
+  padding-bottom: 2px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* === LÍNEAS DIVISORIAS === */
+hr, .section-divider {
+  border: none;
+  border-top: 3px solid #ff9800;
+  margin: 1.5em 0 1em 0;
+}
+
+/* === TABLAS === */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto 2em auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 98vw;
+}
+table th, table td {
+  border: none;
+  padding: 7px 8px;
+  font-size: 1.01em;
+  color: #222;
+}
+table th {
+  background: #f5f5f5;
+  color: #ff9800;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+table tr:not(:last-child) td {
+  border-bottom: 1px solid #e0e0e0;
+}
+table tr:hover td {
+  background: #f9f9f9;
+}
+.tabla-compacta th, .tabla-compacta td {
+  padding: 3px 5px !important;
+  font-size: 0.95em !important;
+}
+
+/* === GRUPOS === */
+.grupos-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.grupo-box {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1.2em 2em;
+  min-width: 160px;
+  text-align: center;
+}
+.grupo-box h4 {
+  color: #1a2980;
+  background: none;
+  border: none;
+  margin-bottom: 0.7em;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+.grupo-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.grupo-box li {
+  font-size: 1.05em;
+  color: #333;
+  padding: 0.3em 0;
+}
+
+/* === SECCIONES === */
+section {
+  margin-bottom: 2em;
+}
+
+/* === MENÚ DE NAVEGACIÓN IGUAL A INDEX === */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00274d;
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.site-header .logo img {
+  height: 50px;
+}
+.main-nav {
+  position: relative;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+  color: #fdfaf8;
+}
+.main-nav a.active {
+  border-bottom: 4px solid #c8102e;
+  color: #fdfaf8;
+}
+
+/* === TARJETAS DE PARTIDOS === */
+.partidos-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+.partidos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.partido-card {
+  background: #061d49;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 1.5em 1.2em 1.2em 1.2em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 210px;
+  position: relative;
+}
+.partido-card h3 {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 700;
+  border: none;
+  margin-bottom: 0.7em;
+  text-align: left;
+}
+.partido-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  font-size: 1.05em;
+  margin-bottom: 1.2em;
+}
+.partido-info span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.partido-info .icon {
+  color: #ff9800;
+  font-size: 1.1em;
+}
+.btn-calendario, .btn-marcador {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.6em;
+  font-size: 1.15em;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  transition: background 0.2s;
+  margin-top: 1em;
+}
+.btn-calendario:hover, .btn-marcador:hover {
+  background: #e07c00;
+}
+.titulo-futbol {
+  color: #fff;
+  font-size: 2.7em;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.titulo-futbol .icon-ball {
+  font-size: 2.2em;
+  color: #ff9800;
+}
+.mini-marcador {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 0.7em 1.2em;
+  margin-top: 8px;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+  }
+  .site-header .logo img {
+    height: 40px;
+  }
+  .grupos-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  table {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 900px) {
+  .partidos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .titulo-futbol {
+    font-size: 2em;
+  }
+}

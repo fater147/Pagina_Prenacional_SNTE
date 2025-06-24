@@ -44,64 +44,70 @@
   <div class="container">
     <h2>Disciplinas Convocadas</h2>
     <div class="grid-cards">
-      <div class="card" style="background-image: url('img/ajedrez.jpg')">
+      <a href="Disciplinas/info_disciplinas/inf_ajedrez.html" class="card" style="background-image: url('img/ajedrez.jpg')">
         <div class="overlay">
           <h3>Ajedrez</h3>
           <p>Mixto. Máx. 2 jugadores. Sistema Suizo.</p>
         </div>
-      </div>
-      <div class="card" style="background-image: url('img/baloncesto.jpg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_basquetbol.html" class="card" style="background-image: url('img/baloncesto.jpg')">
         <div class="overlay">
           <h3>Básquetbol </h3>
           <p>Varonil y femenil. 8–12 jugadores. 4 tiempos de 10 min.</p>
         </div>
-      </div>
-      <div class="card" style="background-image: url('img/beisbo.jpeg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_beisbol.html" class="card" style="background-image: url('img/beisbo.jpeg')">
         <div class="overlay">
-          <h3>Béisbol & Softbol</h3>
+          <h3>Béisbol</h3>
           <p>Varonil. 12–20 jugadores. A 7 entradas.</p>
         </div>
-      </div>
-      <div class="card" style="background-image: url('img/futbol.jpg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_softbol.html" class="card" style="background-image: url('img/sofbol.jpg')">
+        <div class="overlay">
+          <h3>softbol</h3>
+          <p>Varonil. 12–20 jugadores. A 7 entradas.</p>
+        </div>
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_futbol.html" class="card" style="background-image: url('img/futbol.jpg')">
         <div class="overlay">
           <h3>Fútbol Soccer</h3>
           <p>Varonil. 11–22 jugadores. 2 tiempos de 45 min.</p>
         </div>
-      </div>
-      <div class="card" style="background-image: url('img/voleivol.jpg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_volleyball.html" class="card" style="background-image: url('img/voleivol.jpg')">
         <div class="overlay">
           <h3>Voleibol</h3>
           <p>8–12 jugadores. 2 sets de 25, 1 de 15. Gana 2 de 3.</p>
         </div>
-      </div>
-      <div class="card" style="background-image: url('img/atletismo.jpg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_atletismo.html" class="card" style="background-image: url('img/atletismo.jpg')">
         <div class="overlay">
           <h3>Atletismo</h3>
           <p>Carreras y lanzamientos. Categorías por edad.</p>
         </div>
-      </div>
-      <div class="card" style="background-image: url('img/danza.jpg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_danza.html" class="card" style="background-image: url('img/danza.jpg')">
         <div class="overlay">
           <h3>Danza</h3>
           <p>Participación libre para todas las edades</p>
           <p>Formato grupal mixto</p>
         </div>
-      </div>
-       <div class="card" style="background-image: url('img/musica.jpg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_musica.html" class="card" style="background-image: url('img/musica.jpg')">
         <div class="overlay">
           <h3>Música</h3>
           <p>Participación libre para todas las edades</p>
           <p>Se aceptan grupos musicales o corales</p>
         </div>
-      </div>
-       <div class="card" style="background-image: url('img/poesia.jpg')">
+      </a>
+      <a href="Disciplinas/info_disciplinas/inf_poesia.html" class="card" style="background-image: url('img/poesia.jpg')">
         <div class="overlay">
           <h3>Poesía</h3>
           <p>Participación libre para todas las edades</p>
           <p>puede ser individual o en grupo</p>
           <p> permite poesía original o interpretativa</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -212,3 +218,27 @@
   });
 </script>
   </footer>
+
+  <!-- Popup Modal Imagen -->
+  <div id="popup-modal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+    <div style="position:relative; max-width:90vw; max-height:90vh; display:flex; justify-content:center; align-items:center;">
+      <img src="img/popup.jpg" alt="Bienvenida" style="max-width:90vw; max-height:80vh; border-radius:18px; box-shadow:0 4px 32px #000; cursor:pointer;">
+      <button id="cerrar-popup" style="position:absolute; top:10px; right:10px; background:#c8102e; color:#fff; border:none; border-radius:50%; width:32px; height:32px; font-size:1.3em; cursor:pointer;">&times;</button>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (!sessionStorage.getItem('popupMostrado')) {
+        document.getElementById('popup-modal').style.display = 'flex';
+        sessionStorage.setItem('popupMostrado', '1');
+      }
+      document.getElementById('cerrar-popup').onclick = function() {
+        document.getElementById('popup-modal').style.display = 'none';
+      };
+      document.querySelector('#popup-modal img').onclick = function() {
+        document.getElementById('popup-modal').style.display = 'none';
+      };
+    });
+  </script>
+</body>
+</html>

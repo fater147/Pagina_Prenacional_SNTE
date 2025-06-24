@@ -38,8 +38,10 @@
             align-items: center;
         }
         .site-header .logo img {
-            height: 48px;
-            max-width: 120px;
+            width: 179px;
+            height: 50px;
+            max-width: none;
+            max-height: none;
             display: block;
         }
         .site-header h1 {
@@ -76,9 +78,10 @@
         /* Línea roja fija debajo de "Patrocinadores" en el menú */
         .main-nav a[data-menu-patrocinadores] {
             position: relative;
+            color: #E0E0E0 !important;
         }
         .main-nav a[data-menu-patrocinadores].active {
-            color: #E0E0E0; /* Mantiene el color original aunque esté activa */
+            color: #fff !important;
         }
         .main-nav a[data-menu-patrocinadores]::after {
             content: "";
@@ -296,7 +299,7 @@
             <li><a href="../Convocatoria/convocatoria.html">Convocatoria</a></li>
             <li><a href="../Disciplinas/Disciplinas.html">Disciplinas</a></li>
             <li><a href="../Hoteles/hotelesof.html">Hoteles</a></li>
-            <li><a href="patrocinadores.html">Patrocinadores</a></li>
+            <li><a href="patrocinadores.html" data-menu-patrocinadores>Patrocinadores</a></li>
             <li><a href="../en vivo/en_vivo.html">Directos</a></li>
           </ul>
         </nav>
@@ -408,7 +411,14 @@
                 </div>
             </section>
         </section>
-
+<!-- Sección Otras actividades -->
+        <section class="otras-actividades" style="text-align:center; padding:40px 20px; background:#fff; border-radius:12px; margin-bottom:50px; max-width:1200px; margin-left:auto; margin-right:auto;">
+            <h2 style="color:var(--azul-principal); font-size:2em; margin-bottom:30px;">Otras actividades</h2>
+            <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
+                <img src="../img/actividadeskino.jpg" alt="Actividad 1" style="max-width:350px; width:100%; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f4f6f9; min-height:180px;">
+                <img src="../img/actividadessancarlos.jpg" alt="Actividad 2" style="max-width:350px; width:100%; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f4f6f9; min-height:180px;">
+            </div>
+        </section>
         <section class="otros-patrocinadores">
             <h2>Nuestros Colaboradores</h2>
             <div class="logos-patrocinadores">
@@ -416,8 +426,14 @@
                 <a href="https://www.facebook.com/TecNMHermosillo?locale=es_LA"><img src="../img/fb.png" alt="Logo Facebook"></a>
             </div>
         </section>
+        
     </main>
 
+    <!-- Modal para zoom de imágenes de Otras actividades -->
+    <div id="zoom-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+        <span id="close-zoom" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2.5em; cursor:pointer; font-weight:bold; z-index:10001;">&times;</span>
+        <img id="zoom-img" src="" alt="Zoom Actividad" style="max-width:90vw; max-height:80vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.25); background:#fff;">
+    </div>
     <footer class="site-footer">
         <p>© 2025 Sección 61 SNTE - <a href="http://www.ith.mx/">Instituto Tecnológico de Hermosillo</a></p>
     </footer>
@@ -455,6 +471,25 @@
           hint.textContent = 'Haz clic para ver información del negocio';
         }
       }
+
+      // Zoom para imágenes de Otras actividades
+      document.querySelectorAll('.otras-actividades img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function() {
+          document.getElementById('zoom-img').src = this.src;
+          document.getElementById('zoom-modal').style.display = 'flex';
+        });
+      });
+      document.getElementById('close-zoom').onclick = function() {
+        document.getElementById('zoom-modal').style.display = 'none';
+        document.getElementById('zoom-img').src = '';
+      };
+      document.getElementById('zoom-modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.style.display = 'none';
+          document.getElementById('zoom-img').src = '';
+        }
+      });
     </script>
 </body>
 </html>
