@@ -3,28 +3,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Información de Ajedrez</title>
-  <link rel="stylesheet" href="../styles.css">
+  <title>Información de Futblo</title>
+  <link rel="stylesheet" href="estilos_horarios.css">
 </head>
 <body>
-  <header>
-    <h1>Información de Ajedrez</h1>
+  <header class="site-header">
+    <div class="logo">
+      <a href="../../index.html"><img src="../../img/SNTE.png" alt="SNTE Sección 61"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
+        <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
+        <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
+        <li><a href="../../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+        <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <section>
-      <h2>Descripción</h2>
-      <p>
-        Aquí puedes agregar la información relevante sobre la disciplina de ajedrez, reglas, fechas, horarios, etc.
-      </p>
+    <div class="titulo-futbol">
+      <span class="icon-ball">⚽
+      Torneo Futbol Varonil
+    </div>
+    <section style="max-width:900px;margin:2em auto;">
+      <h2 style="color:#fff;">Grupo A</h2>
+      <table style="width:100%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);margin-bottom:2em;">
+        <tr style="background:#f5f5f5;color:#ff9800;font-weight:bold;">
+          <th>Equipo</th>
+        </tr>
+        <tr><td><img src="../../img/equipoculiacan.png" style="height: 50px;vertical-align:middle;"> Equipo Culiacan</td></tr>
+        <tr><td><img src="../../img/equipohuatabampo.png" style="height:50px;vertical-align:middle;"> Equipo Huatabampo</td></tr>
+        <tr><td><img src="../../img/equipolapaz.png" style="height:50px;vertical-align:middle;"> Equipo La paz</td></tr>
+        <tr><td><img src="../../img/equipoyaqui.png" style="height:50px;vertical-align:middle;"> Equipo Valle del Yaqui</td></tr>
+      </table>
+      <h2 style="color:#fff;">Grupo B</h2>
+      <table style="width:100%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+        <tr style="background:#f5f5f5;color:#ff9800;font-weight:bold;">
+          <th>Equipo</th>
+        </tr>
+        <tr><td><img src="../../img/equipoith.png" style="height:50px;vertical-align:middle;"> Equipo Hermosillo</td></tr>
+        <tr><td><img src="../../img/equipotijuana.png" style="height:50px;vertical-align:middle;"> Equipo Tijuana</td></tr>
+        <tr><td><img src="../../img/equiponogales.png" style="height:50px;vertical-align:middle;"> Equipo Nogales</td></tr>
+      </table>
     </section>
-    <section>
-      <h2>Reglamento</h2>
-      <ul>
-        <li>Regla 1</li>
-        <li>Regla 2</li>
-        <li>Regla 3</li>
-      </ul>
+      <div class="partidos-grid">
+        <!-- Jornada 1 -->
+        <div class="partido-card">
+          <h3><img src="../../img/equipoith.png" alt="Hermosillo" style="height:50px;vertical-align:middle;"> Hermosillo vs Tijuana <img src="../../img/equipotijuana.png" alt="Tijuana" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 1 | Grupo B | Hermosillo vs Tijuana</span>
+            <span><span class="icon">📅</span> 23/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">7:30</span> ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador1')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador1" style="display:none;"><table><tr><td><img src="../../img/equipoith.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">2</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">2</td><td><img src="../../img/equipotijuana.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../../img/equipoculiacan.png" alt="Culiacan" style="height:50px;vertical-align:middle;">  Culiacán vs Huatabampo<img src="../../img/equipohuatabampo.png" alt="Huatabampo" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 2 | Grupo A | Culiacán vs Huatabampo</span>
+            <span><span class="icon">📅</span> 23/JUNIO</span>
+            <span><span class="icon">⏰</span> 9:00 ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador2')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador2" style="display:none;"><table><tr><td><img src="../../img/equipoculiacan.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">2</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../../img/equipohuatabampo.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../../img/equipolapaz.png" alt="La Paz" style="height:50px;vertical-align:middle;"> La Paz vs Valle del Yaqui <img src="../../img/equipoyaqui.png" alt="Valle del Yaqui" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 3 | Grupo A | La Paz vs Valle del Yaqui</span>
+            <span><span class="icon">📅</span> 23/JUNIO</span>
+            <span><span class="icon">⏰</span> 10:30 ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador3')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador3" style="display:none;"><table><tr><td><img src="../../img/equipolapaz.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">4</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">1</td><td><img src="../../img/equipoyaqui.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <!-- Jornada 2 -->
+        <div class="partido-card">
+          <h3><img src="../../img/equipoith.png" alt="Hermosillo" style="height:50px;vertical-align:middle;"> Hermosillo vs Nogales <img src="../../img/equiponogales.png" alt="Nogales" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 4 | Grupo B | Hermosillo vs Nogales </span>
+            <span><span class="icon">📅</span> 24/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">7:30</span> ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador4')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador4" style="display:none;"><table><tr><td><img src="../../img/equipoith.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../../img/equiponogales.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../../img/equipoculiacan.png" alt="Culiacan" style="height:50px;vertical-align:middle;"> Culiacán vs La Paz <img src="../../img/equipolapaz.png" alt="La Paz" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 5 | Grupo A | Culiacán vs La Paz</span>
+            <span><span class="icon">📅</span> 24/JUNIO</span>
+            <span><span class="icon">⏰</span> 9:00 ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador5')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador5" style="display:none;"><table><tr><td><img src="../../img/equipoculiacan.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../../img/equipolapaz.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../../img/equipohuatabampo.png" alt="Huatabampo" style="height:50px;vertical-align:middle;"> Huatabampo vs Valle del Yaqui <img src="../../img/equipoyaqui.png" alt="Valle del Yaqui" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 6 | Grupo A | Huatabampo vs Valle del Yaqui</span>
+            <span><span class="icon">📅</span> 24/JUNIO</span>
+            <span><span class="icon">⏰</span> 10:30 ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador6')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador6" style="display:none;"><table><tr><td><img src="../../img/equipohuatabampo.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../../img/equipoyaqui.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <!-- Jornada 3 -->
+        <div class="partido-card">
+          <h3><img src="../../img/equipotijuana.png" alt="Tijuana" style="height:50px;vertical-align:middle;"> Tijuana vs Nogales <img src="../../img/equiponogales.png" alt="Nogales" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 7 | Grupo B | Tijuana vs Nogales</span>
+            <span><span class="icon">📅</span> 25/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">7:30</span> ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador7')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador7" style="display:none;"><table><tr><td><img src="../../img/equipotijuana.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../../img/equiponogales.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../../img/equipoculiacan.png" alt="Culiacan" style="height:50px;vertical-align:middle;"> Culiacán vs Valle del Yaqui <img src="../../img/equipoyaqui.png" alt="Valle del Yaqui" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 8 | Grupo A | Culiacán vs Valle del Yaqui</span>
+            <span><span class="icon">📅</span> 25/JUNIO</span>
+            <span><span class="icon">⏰</span> 9:00 ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador8')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador8" style="display:none;"><table><tr><td><img src="../../img/equipoculiacan.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../../img/equipoyaqui.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../../img/equipohuatabampo.png" alt="Huatabampo" style="height:50px;vertical-align:middle;"> Huatabampo vs La Paz <img src="../../img/equipolapaz.png" alt="La Paz" style="height:50px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 9 | Grupo A | Huatabampo vs La Paz</span>
+            <span><span class="icon">📅</span> 25/JUNIO</span>
+            <span><span class="icon">⏰</span> 10:30 ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador9')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador9" style="display:none;"><table><tr><td><img src="../../img/equipohuatabampo.png" style="height:32px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../../img/equipolapaz.png" style="height:32px;"></td></tr></table></div>
+        </div>
+        <!-- semifinales 
+
+        <div class="partido-card">
+          <h3><img src="../logos/logo1.png" alt="1A" style="height:28px;vertical-align:middle;"> 1A vs 2B <img src="../logos/logo8.png" alt="2B" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 10 | 1A vs 2B</span>
+            <span><span class="icon">📅</span> 26/JUNIO</span>
+            <span><span class="icon">⏰</span> ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador10')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador10" style="display:none;"><table><tr><td><img src="../logos/logo1.png" style="height:24px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../logos/logo8.png" style="height:24px;"></td></tr></table></div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../logos/logo7.png" alt="1B" style="height:28px;vertical-align:middle;"> 1B vs 2A <img src="../logos/logo2.png" alt="2A" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 11 | 1B vs 2A</span>
+            <span><span class="icon">📅</span> 26/JUNIO</span>
+            <span><span class="icon">⏰</span> ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador11')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador11" style="display:none;"><table><tr><td><img src="../logos/logo7.png" style="height:24px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../logos/logo2.png" style="height:24px;"></td></tr></table></div>
+        </div>
+        -->
+        <!-- finales
+        <div class="partido-card">
+          <h3><img src="../logos/logo1.png" alt="Ganador 1" style="height:28px;vertical-align:middle;"> Ganador J13 vs Ganador J14 <img src="../logos/logo7.png" alt="Ganador 2" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 12 | Ganador J13 vs Ganador J14</span>
+            <span><span class="icon">📅</span> 27/JUNIO</span>
+            <span><span class="icon">⏰</span> ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador12')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador12" style="display:none;"><table><tr><td><img src="../logos/logo1.png" style="height:24px;"></td><td style="font-weight:bold; font-size:1.2em;">0</td><td> - </td><td style="font-weight:bold; font-size:1.2em;">0</td><td><img src="../logos/logo7.png" style="height:24px;"></td></tr></table></div>
+        </div>
+      </div>
+      -->
     </section>
+    <script>
+      function mostrarMarcador(id) {
+        var el = document.getElementById(id);
+        var isVisible = el && el.style.display === 'block';
+        document.querySelectorAll('.mini-marcador').forEach(function(div) { div.style.display = 'none'; });
+        if(el && !isVisible) el.style.display = 'block';
+      }
+      document.querySelectorAll('.btn-marcador').forEach(function(btn) {
+        btn.addEventListener('click', function(e) { e.stopPropagation(); });
+      });
+      document.body.addEventListener('click', function() {
+        document.querySelectorAll('.mini-marcador').forEach(function(div) { div.style.display = 'none'; });
+      });
+    </script>
   </main>
 </body>
 </html>

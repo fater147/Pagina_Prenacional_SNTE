@@ -4,27 +4,263 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Información de Ajedrez</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="estilos_horarios.css">
 </head>
 <body>
-  <header>
-    <h1>Información de Ajedrez</h1>
+  <header class="site-header">
+    <div class="logo">
+      <a href="../../index.html"><img src="../../img/SNTE.png" alt="SNTE Sección 61"></a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../Convocatoria/convocatoria.html">Convocatoria</a></li>
+        <li><a href="../../Disciplinas/Disciplinas.html" class="active">Disciplinas</a></li>
+        <li><a href="../../Hoteles/hotelesof.html">Hoteles</a></li>
+        <li><a href="../../Organizadores y patrocinadores/patrocinadores.html">Patrocinadores</a></li>
+        <li><a href="../../en vivo/en_vivo.html">Directos</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <section>
-      <h2>Descripción</h2>
-      <p>
-        Aquí puedes agregar la información relevante sobre la disciplina de ajedrez, reglas, fechas, horarios, etc.
-      </p>
+    <div class="titulo-futbol">
+      <span class="icon-ball">🏀</span>
+      Basquetbol Varonil (5 Equipos)
+    </div>
+    <section style="max-width:900px;margin:2em auto;">
+      <h2 style="color:#fff;">Grupo A</h2>
+      <table style="width:100%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);margin-bottom:2em;">
+        <tr style="background:#f5f5f5;color:#ff9800;font-weight:bold;"><th>Equipo</th></tr>
+        <tr><td>1. Equipo 1</td></tr>
+        <tr><td>2. Equipo 2</td></tr>
+        <tr><td>3. Equipo 3</td></tr>
+        <tr><td>4. Equipo 4</td></tr>
+        <tr><td>5. Equipo 5</td></tr>
+      </table>
     </section>
-    <section>
-      <h2>Reglamento</h2>
-      <ul>
-        <li>Regla 1</li>
-        <li>Regla 2</li>
-        <li>Regla 3</li>
-      </ul>
+    <section class="partidos-section">
+      <div class="partidos-grid">
+        <!-- Jornada 1 -->
+        <div class="partido-card">
+          <h3><img src="../logos/logo1.png" alt="Equipo 1" style="height:28px;vertical-align:middle;"> Equipo 1 vs <img src="../logos/logo2.png" alt="Equipo 2" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 1 | Grupo A | 1-2</span>
+            <span><span class="icon">📅</span> 23/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">18:00</span> Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador1')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador1">
+            <table>
+              <tr>
+                <td><img src="../logos/logo1.png" alt="Equipo 1" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo2.png" alt="Equipo 2" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../logos/logo3.png" alt="Equipo 3" style="height:28px;vertical-align:middle;"> Equipo 3 vs <img src="../logos/logo4.png" alt="Equipo 4" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 2 | Grupo A | 3-4 (Descansa 5)</span>
+            <span><span class="icon">📅</span> 23/JUNIO</span>
+            <span><span class="icon">⏰</span> 17:00 Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador2')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador2">
+            <table>
+              <tr>
+                <td><img src="../logos/logo3.png" alt="Equipo 3" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo4.png" alt="Equipo 4" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- Jornada 2 -->
+        <div class="partido-card">
+          <h3><img src="../logos/logo1.png" alt="Equipo 1" style="height:28px;vertical-align:middle;"> Equipo 1 vs <img src="../logos/logo3.png" alt="Equipo 3" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 3 | Grupo A | 1-3</span>
+            <span><span class="icon">📅</span> 24/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">18:00</span> Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador3')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador3">
+            <table>
+              <tr>
+                <td><img src="../logos/logo1.png" alt="Equipo 1" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo3.png" alt="Equipo 3" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../logos/logo4.png" alt="Equipo 4" style="height:28px;vertical-align:middle;"> Equipo 4 vs <img src="../logos/logo5.png" alt="Equipo 5" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 4 | Grupo A | 4-5 (Descansa 2)</span>
+            <span><span class="icon">📅</span> 24/JUNIO</span>
+            <span><span class="icon">⏰</span> 17:00 Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador4')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador4">
+            <table>
+              <tr>
+                <td><img src="../logos/logo4.png" alt="Equipo 4" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo5.png" alt="Equipo 5" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- Jornada 3 -->
+        <div class="partido-card">
+          <h3><img src="../logos/logo1.png" alt="Equipo 1" style="height:28px;vertical-align:middle;"> Equipo 1 vs <img src="../logos/logo4.png" alt="Equipo 4" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 5 | Grupo A | 1-4</span>
+            <span><span class="icon">📅</span> 25/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">18:00</span> Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador5')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador5">
+            <table>
+              <tr>
+                <td><img src="../logos/logo1.png" alt="Equipo 1" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo4.png" alt="Equipo 4" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../logos/logo5.png" alt="Equipo 5" style="height:28px;vertical-align:middle;"> Equipo 5 vs <img src="../logos/logo2.png" alt="Equipo 2" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 6 | Grupo A | 5-2 (Descansa 3)</span>
+            <span><span class="icon">📅</span> 25/JUNIO</span>
+            <span><span class="icon">⏰</span> 17:00 Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador6')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador6">
+            <table>
+              <tr>
+                <td><img src="../logos/logo5.png" alt="Equipo 5" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo2.png" alt="Equipo 2" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- Jornada 4 -->
+        <div class="partido-card">
+          <h3><img src="../logos/logo1.png" alt="Equipo 1" style="height:28px;vertical-align:middle;"> Equipo 1 vs <img src="../logos/logo5.png" alt="Equipo 5" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 7 | Grupo A | 1-5</span>
+            <span><span class="icon">📅</span> 26/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">18:00</span> Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador7')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador7">
+            <table>
+              <tr>
+                <td><img src="../logos/logo1.png" alt="Equipo 1" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo5.png" alt="Equipo 5" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../logos/logo3.png" alt="Equipo 3" style="height:28px;vertical-align:middle;"> Equipo 3 vs <img src="../logos/logo2.png" alt="Equipo 2" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 8 | Grupo A | 3-2 (Descansa 4)</span>
+            <span><span class="icon">📅</span> 26/JUNIO</span>
+            <span><span class="icon">⏰</span> 17:00 Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador8')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador8">
+            <table>
+              <tr>
+                <td><img src="../logos/logo3.png" alt="Equipo 3" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo2.png" alt="Equipo 2" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- Jornada 5 -->
+        <div class="partido-card">
+          <h3><img src="../logos/logo5.png" alt="Equipo 5" style="height:28px;vertical-align:middle;"> Equipo 5 vs <img src="../logos/logo3.png" alt="Equipo 3" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 9 | Grupo A | 5-3</span>
+            <span><span class="icon">📅</span> 27/JUNIO</span>
+            <span><span class="icon">⏰</span> 13:00 Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador9')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador9">
+            <table>
+              <tr>
+                <td><img src="../logos/logo5.png" alt="Equipo 5" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo3.png" alt="Equipo 3" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="partido-card">
+          <h3><img src="../logos/logo4.png" alt="Equipo 4" style="height:28px;vertical-align:middle;"> Equipo 4 vs <img src="../logos/logo2.png" alt="Equipo 2" style="height:28px;vertical-align:middle;"></h3>
+          <div class="partido-info">
+            <span>#Juego 10 | Grupo A | 4-2 (Descansa 1)</span>
+            <span><span class="icon">📅</span> 27/JUNIO</span>
+            <span><span class="icon">⏰</span> <span style="color:#ff9800;font-weight:bold;">14:00</span> Gimnasio ITH</span>
+          </div>
+          <button class="btn-marcador" onclick="mostrarMarcador('marcador10')">Ver marcador</button>
+          <div class="mini-marcador" id="marcador10">
+            <table>
+              <tr>
+                <td><img src="../logos/logo4.png" alt="Equipo 4" style="height:24px;"></td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td> - </td>
+                <td style="font-weight:bold; font-size:1.2em;">0</td>
+                <td><img src="../logos/logo2.png" alt="Equipo 2" style="height:24px;"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     </section>
+    <script>
+      function mostrarMarcador(id) {
+        var el = document.getElementById(id);
+        var isVisible = el && el.style.display === 'block';
+        document.querySelectorAll('.mini-marcador').forEach(function(div) { div.style.display = 'none'; });
+        if(el && !isVisible) el.style.display = 'block';
+      }
+      document.querySelectorAll('.btn-marcador').forEach(function(btn) {
+        btn.addEventListener('click', function(e) { e.stopPropagation(); });
+      });
+      document.body.addEventListener('click', function() {
+        document.querySelectorAll('.mini-marcador').forEach(function(div) { div.style.display = 'none'; });
+      });
+    </script>
   </main>
 </body>
 </html>
